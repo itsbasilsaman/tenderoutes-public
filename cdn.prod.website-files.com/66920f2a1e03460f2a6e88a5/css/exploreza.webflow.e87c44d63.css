@@ -6623,6 +6623,16 @@ button:hover {
   color: black;
 }
 
+ .hamburger-bar.menu-bar-dark {
+              background: #fff !important;
+            }
+
+@media (max-width: 767px) {
+  .navbar-content {
+    color: #000 !important;
+  }
+}
+
 .navbar-two.about-page {
   background-color: rgba(0, 0, 0, 0.592);
 }
