@@ -28,6 +28,7 @@
   <meta content="Webflow" name="generator" />
   <!-- Font Awesome CDN (Latest via jsDelivr) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
 
   <link href="../../cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/css/exploreza.webflow.e87c44d63.css"
     rel="stylesheet" type="text/css" />
@@ -54,6 +55,57 @@
   
   <script
     type="text/javascript">window.__WEBFLOW_CURRENCY_SETTINGS = { "currencyCode": "USD", "symbol": "$", "decimal": ".", "fractionDigits": 2, "group": ",", "template": "{{wf {\"path\":\"symbol\",\"type\":\"PlainText\"} }} {{wf {\"path\":\"amount\",\"type\":\"CommercePrice\"} }} {{wf {\"path\":\"currencyCode\",\"type\":\"PlainText\"} }}", "hideDecimalForWholeNumbers": false };</script>
+  <style>
+    @media (min-width: 768px) {
+      /* Itinerary day card improvements */
+      .trip-details-about-left .flex.flex-col.md\:flex-row.items-center {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 32px;
+        margin-bottom: 32px;
+      }
+      .trip-details-about-left .flex.flex-col.md\:flex-row.items-center .grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+        min-width: 220px;
+        max-width: 320px;
+        margin-right: 24px;
+      }
+      .trip-details-about-left .flex.flex-col.md\:flex-row.items-center .grid img:first-child {
+        display: block;
+      }
+      .trip-details-about-left .flex.flex-col.md\:flex-row.items-center .grid img:last-child {
+        display: none;
+      }
+      .trip-details-about-left .flex-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      /* Price details columns side by side */
+      .price-details {
+        flex-direction: row !important;
+        gap: 32px;
+        align-items: stretch;
+        margin-top: 32px;
+      }
+      .price-details .price-column {
+        max-width: 480px;
+        min-width: 320px;
+        margin: 0 8px;
+      }
+      /* Container max width for better readability */
+      .trip-details-about .container.w-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      /* Tour plan timeline spacing */
+      .plan-wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -74,47 +126,7 @@
             src="../Assets/logo.png"
             loading="lazy" alt="Exploreza" style="width: 140px;" />
           </a>
-        <nav role="navigation" class="nav-menu w-nav-menu">
-          <div data-hover="true" data-delay="0" class="dropdown w-dropdown">
-            <div class="dropdown-toggle w-dropdown-toggle">
-              <a href="../index.html"   class="navbar-content" >Home</a>
-            
-            </div>
-     
-          </div>
-          <div data-hover="true" data-delay="0" class="dropdown w-dropdown">
-            <div class="dropdown-toggle w-dropdown-toggle">
-              <a href="../about.html"   class="navbar-content" >About</a>
-           
-            </div>
-            
-          </div>
-          <div data-hover="true" data-delay="0" class="dropdown w-dropdown">
-            <div class="dropdown-toggle w-dropdown-toggle">
-              <a href="../packages-main.html"   class="navbar-content" >Packages</a>
-          
-            </div>
-          
-          </div>
-
-          <div data-hover="true" data-delay="0" class="dropdown w-dropdown">
-            <div class="dropdown-toggle w-dropdown-toggle">
-              <a href="../faq.html"   class="navbar-content" >Faq</a>
-          
-            </div>
-          
-          </div>
-       
-      
-          <div data-hover="true" data-delay="0" class="dropdown w-dropdown">
-            <div class="dropdown-toggle w-dropdown-toggle">
-              <a href="../contact-one.html"  class="navbar-content">Contact</a>
-           
-            </div>
-         
-          </div>
-         
-        </nav>
+        
         <div class="block navbar-right-section">
           <div class="language-switch">
             <input type="checkbox" id="language-toggle">
@@ -124,36 +136,23 @@
                 <span class="label-ar">العر</span>
             </label>
           </div>
-          <i class="fa-solid fa-phone"></i>
-          <a href="tel:918590061859">
-            <div class="navbar-number-section">
-               <div style="color: white;font-size: 14px;" >Need to help? call us</div>
-               <div class="navbar-number">+91 8590061859</div>
-            </div>
-          </a>
-          <a href="https://wa.me/918590061859" target="_blank" rel="noopener noreferrer">  <i class="fa-brands fa-whatsapp"></i></a>
+          
         </div>
        
-        <div class="menu-hamburger w-nav-button">
-          <div class="w-layout-vflex hamburger-wrapper">
-            <div class="hamburger-bar menu-bar-one menu-bar-dark"></div>
-            <div class="hamburger-bar menu-bar-two menu-bar-dark"></div>
-          </div>
-        </div>
+       
       </div>
     </div>
   </div>
-    <section class="tour-hero standard-one">
+    <section class="tour-hero munnar">
       <div class="w-layout-blockcontainer w-container">
         <h1
         data-w-id="a7266acd-2b6f-f317-92fa-c8f6e150f8e0"
         class="no-margin text-color-white text-align-center"
         id="hero-title"
-        
-        style="font-family: 'Kaushan Script', cursive;">
-        Standard Package 
+        style="font-family: 'Kaushan Script', cursive; font-size: 20px;">
+          10 Days Normal Package (SAR 4,700)
       </h1>
-      <p style="text-align: center; color: rgb(193, 193, 193); font-size: 19px; font-weight: 600;">10 Days Standard Retreat</p>
+      
 
       </div>
     </section>
@@ -169,21 +168,13 @@
                   loading="lazy" alt="Icon" class="margin-top-five" />
                 <div class="w-layout-vflex information">
                   <div class="heading-style-h6" data-en="Duration" data-ar="المدة">Duration</div>
-                  <div data-en="9 Nights - 10 Days" data-ar="٩ ليالٍ - ١٠ أيام">9 Nights - 10 Days</div>
+                  <div data-en="9 Nights - 10 Days" data-ar="9 ليالٍ - 10 أيام">10 Days</div>
                 </div>
               </div>
     
               <div class="trip-border"></div>
     
-              <!-- Group Size -->
-              <div class="w-layout-hflex trip-details-options">
-                <img src="https://cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/677bc91fd77f8dcd3e9becde_People.svg"
-                  loading="lazy" alt="Icon" class="margin-top-five" />
-                <div class="w-layout-vflex information">
-                  <div class="heading-style-h6" data-en="Group size" data-ar="حجم المجموعة">Group size</div>
-                  <div data-en="2 (Private tour)" data-ar="٢ (جولة خاصة)">2 (Private tour)</div>
-                </div>
-              </div>
+              
     
               <div class="trip-border"></div>
     
@@ -193,7 +184,7 @@
                   loading="lazy" alt="Icon" class="margin-top-five" />
                 <div class="w-layout-vflex information">
                   <div class="heading-style-h6" data-en="Transport" data-ar="وسيلة النقل">Transport</div>
-                  <div data-en="Private AC Innova Crysta" data-ar="سيارة إينوفا كريستا خاصة بمكيف هواء">Private AC Innova Crysta</div>
+                  <div data-en="Private Toyota Innova Crysta" data-ar="سيارة إينوفا كريستا خاصة">Toyota Innova Crysta</div>
                 </div>
               </div>
     
@@ -205,7 +196,7 @@
                   loading="lazy" alt="Icon" class="margin-top-five" />
                 <div class="w-layout-vflex information">
                   <div class="heading-style-h6" data-en="Destinations" data-ar="الوجهات">Destinations</div>
-                  <div data-en="Kochi, Athirappilly, Munnar, Thekkady, Alappuzha" data-ar="كوتشي، أثيرابيلي، مونار، تيكادي، أليبي">Kochi, Athirappilly, Munnar, Thekkady, Alappuzha</div>
+                  <div data-en="Kochi, Munnar, Alleppey" data-ar="كوتشي، مونار، أليبي">Kochi, Munnar, Thekkady, Alleppey</div>
                 </div>
               </div>
     
@@ -213,10 +204,10 @@
     
               <!-- Luxury Level -->
               <div class="w-layout-hflex trip-details-options">
-                <i class="fa-solid fa-star" style="font-size: 22px;"></i>
+                <i class="fa-solid fa-right-long" style="font-size: 22px;"></i>
                 <div class="w-layout-vflex information">
-                  <div class="heading-style-h6" data-en="Luxury Level" data-ar="مستوى الفخامة">Luxury Level</div>
-                  <div data-en="4- & 5-Star Hotels + Luxury Houseboat" data-ar="فنادق 4 و 5 نجوم + هاوسبوت فاخر">4- & 5-Star Hotels + Luxury Houseboat</div>
+                  <div class="heading-style-h6" data-en="Luxury Level" data-ar="مستوى الفخامة">Package Type</div>
+                  <div data-en="5-Star Hotels + Luxury Houseboat" data-ar="فنادق 5 نجوم + هاوسبوت فاخر">Luxury Package (SAR 5,500)</div>
                 </div>
               </div>
     
@@ -225,7 +216,6 @@
         </section>
       </div>
     </section>
-    
     
 
     
@@ -239,78 +229,213 @@
               <div class="tab-links-menu w-tab-menu"><a data-w-tab="Tab 1"
                   class="trip-tab-link w-inline-block w-tab-link w--current">
                   <div data-en="Overview" data-ar="نظرة عامة">Overview</div>
-                </a><a data-w-tab="Tab 2" class="trip-tab-link w-inline-block w-tab-link">
-                  <div data-en="Inclusions" data-ar="المشمولات">Inclusions</div>
-                </a><a data-w-tab="Tab 3" class="trip-tab-link w-inline-block w-tab-link">
+                </a> <a data-w-tab="Tab 3" class="trip-tab-link w-inline-block w-tab-link">
                   <div data-en="itinerary" data-ar="البرنامج">itinerary</div>
-                </a><a data-w-tab="Tab 4" class="trip-tab-link w-inline-block w-tab-link">
-                  <div data-en="Faq" data-ar="الأسئلة الشائعة">Faq</div>
-                </a></div>
+                </a> </div>
                 <div class="w-tab-content">
                   <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
                     <div class="w-richtext">
-                      <h2 data-en="Overview" data-ar="نظرة عامة">Overview</h2>
-                      <p data-en="Enjoy the best of Kerala with this luxurious 10-day package. The journey begins with arrival in Kochi and exploring its heritage sites, then heading to the mist-covered hills of Munnar for tea plantations, waterfalls, and nature trails." data-ar="استمتع بأفضل ما في كيرالا مع هذه الحزمة الفاخرة لمدة 10 أيام. تبدأ الرحلة بالوصول إلى كوتشي واستكشاف مواقعها التراثية، ثم التوجه إلى تلال مونار المغطاة بالضباب للاستمتاع بمزارع الشاي والشلالات ومسارات الطبيعة.">Enjoy the best of Kerala with this luxurious 10-day package. The journey begins with arrival in Kochi and exploring its heritage sites, then heading to the mist-covered hills of Munnar for tea plantations, waterfalls, and nature trails.</p>
-                      <p data-en="Next, go on a wildlife adventure and spice plantation visit in Thekkady, followed by a serene stay on a luxury houseboat in Alappuzha (Alleppey). The trip ends with a relaxing return to Kochi with time for shopping and cultural experiences." data-ar="بعد ذلك، انطلق في مغامرة للحياة البرية وزيارة مزارع التوابل في ثيكادي، تليها إقامة هادئة على متن منزل عائم فاخر في ألابوزا (أليبي). تنتهي الرحلة بالعودة المريحة إلى كوتشي مع وقت للتسوق والتجارب الثقافية.">Next, go on a wildlife adventure and spice plantation visit in Thekkady, followed by a serene stay on a luxury houseboat in Alappuzha (Alleppey). The trip ends with a relaxing return to Kochi with time for shopping and cultural experiences.</p>
+                  <div data-en="Overview" data-ar="نظرة عامة" class="text-2xl font-bold mb-6">Overview</div>
+<div class="flex flex-col gap-4">
+  <!-- Day 1 -->
+  <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow p-4 md:p-6 gap-4">
+   <div class="grid grid-cols-2 gap-1">
+      <img src="https://cdn.bluebirdtravels.in/wp-content/uploads/kochi-ernakulam/kochi-airport-720x530.jpg" alt="Kochi" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+      <img src="http://ihg.scene7.com/is/image/ihg/crowne-plaza-beijing-2723856209-4x3" alt="Kochi" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+    </div>
+    <div class="flex-1">
+      <div class="flex items-center gap-2 mb-1 text-[19px]">
+        <i class="fa-solid fa-plane-arrival text-blue-600"></i>
+        <div class="font-semibold ">Day 1</div>
+      </div>
+      <span class="text-gray-700">Arrival in Kochi – Check-in at Holiday Inn</span>
+      <div class="text-sm text-gray-500">Start your Kerala journey with a comfortable stay at Holiday Inn.</div>
+    </div>
+  </div>
+  <!-- Day 2 -->
+  <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow p-4 md:p-6 gap-4">
+    <div class="grid grid-cols-2 gap-1">
+      <img src="/Assets/munnar.jpg" alt="Munnar" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+      <img src="/Assets/bg-2.jpg" alt="Munnar" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+    </div>
+    <div class="flex-1">
+      <div class="flex items-center gap-2 mb-1 text-[19px]">
+        <i class="fa-solid fa-mountain text-green-600"></i>
+        <span class="font-semibold">Day 2</span>
+      </div>
+      <span class="text-gray-700">Drive to Munnar – Scenic views – Stay at Valley by Kondotty</span>
+      <div class="text-sm text-gray-500">Enjoy the beautiful drive to Munnar and check in to Valley by Kondotty.</div>
+    </div>
+  </div>
+  <!-- Day 3 -->
+  <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow p-4 md:p-6 gap-4">
+     <div class="grid grid-cols-2 gap-2">
+      <img src="/Assets/munnar-4.jpg" alt="Munnar" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+      <img src="/Assets/kerala-1.jpg" alt="Munnar" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+    </div>
+    <div class="flex-1">
+      <div class="flex items-center gap-2 mb-1 text-[19px]">
+        <i class="fa-solid fa-tree text-green-700"></i>
+        <span class="font-semibold">Day 3</span>
+      </div>
+      <span class="text-gray-700">Munnar – Explore tea gardens, waterfalls – Stay at Valley by Kondotty</span>
+      <div class="text-sm text-gray-500">Visit tea gardens and waterfalls, then relax at Valley by Kondotty.</div>
+    </div>
+  </div>
+  <!-- Day 4 -->
+  <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow p-4 md:p-6 gap-4">
+    <div class="grid grid-cols-2 gap-2">
+      <img src="/Assets/munnar-3.jpg" alt="Munnar" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+      <img src="/Assets/wayanad-2.jpg" alt="Munnar" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+    </div>
+    <div class="flex-1">
+      <div class="flex items-center gap-2 mb-1 text-[19px]">
+        <i class="fa-solid fa-hippo text-yellow-700"></i>
+        <span class="font-semibold">Day 4</span>
+      </div>
+      <span class="text-gray-700">Munnar – Leisure day or optional trekking – Stay at Valley by Kondotty</span>
+      <div class="text-sm text-gray-500">Enjoy a leisure day or go for an optional trek, then stay at Valley by Kondotty.</div>
+    </div>
+  </div>
+  <!-- Day 5 -->
+  <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow p-4 md:p-6 gap-4">
+   <div class="grid grid-cols-2 gap-2">
+      <img src="/Assets/wayanad-2.jpg" alt="Thekkady" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+      <img src="/Assets/alleppey-4.jpeg" alt="Thekkady" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+    </div>
+    <div class="flex-1">
+      <div class="flex items-center gap-2 mb-1 text-[19px]">
+        <i class="fa-solid fa-water text-blue-500"></i>
+        <span class="font-semibold">Day 5</span>
+      </div>
+      <span class="text-gray-700">Drive to Thekkady – Spice plantation tour – Stay at Greenwoods</span>
+      <div class="text-sm text-gray-500">Tour a spice plantation and stay at Greenwoods in Thekkady.</div>
+    </div>
+  </div>
+  <!-- Day 6 -->
+  <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow p-4 md:p-6 gap-4">
+     <div class="grid grid-cols-2 gap-2">
+      <img src="/Assets/kerala-bg.jpg" alt="Alleppey" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+      <img src="/Assets/aleppy-3.jpeg" alt="Alleppey" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+    </div>
+    <div class="flex-1">
+      <div class="flex items-center gap-2 mb-1 text-[19px]">
+        <i class="fa-solid fa-shopping-bag text-pink-600"></i>
+        <span class="font-semibold">Day 6</span>
+      </div>
+      <span class="text-gray-700">Drive to Alleppey – Check-in at Lake Canopy</span>
+      <div class="text-sm text-gray-500">Arrive in Alleppey and check in at Lake Canopy.</div>
+    </div>
+  </div>
+  <!-- Day 7 -->
+  <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow p-4 md:p-6 gap-4">
+     <div class="grid grid-cols-2 gap-2">
+      <img src="/Assets/alleppey-4.jpeg" alt="Alleppey" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+      <img src="/Assets/aleppey-1.jpg" alt="Alleppey" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+    </div>
+    <div class="flex-1">
+      <div class="flex items-center gap-2 mb-1 text-[19px]">
+        <i class="fa-solid fa-plane-departure text-gray-700"></i>
+        <span class="font-semibold">Day 7</span>
+      </div>
+      <span class="text-gray-700">Alleppey – Local backwater activities – Stay at Lake Canopy</span>
+      <div class="text-sm text-gray-500">Enjoy backwater activities and stay at Lake Canopy.</div>
+    </div>
+  </div>
+  <!-- Day 8 -->
+  <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow p-4 md:p-6 gap-4">
+    <div class="grid grid-cols-2 gap-2">
+      <img src="/Assets/kochi-2.jpeg" alt="Kochi" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+      <img src="/Assets/kochi-3.jpg" alt="Kochi" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+    </div>
+    <div class="flex-1">
+      <div class="flex items-center gap-2 mb-1 text-[19px]">
+        <i class="fa-solid fa-shopping-bag text-pink-600"></i>
+        <span class="font-semibold">Day 8</span>
+      </div>
+      <span class="text-gray-700">Return to Kochi – Stay at Radisson Blu</span>
+      <div class="text-sm text-gray-500">Head back to Kochi and check in at Radisson Blu.</div>
+    </div>
+  </div>
+  <!-- Day 9 -->
+  <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow p-4 md:p-6 gap-4">
+   <div class="grid grid-cols-2 gap-2">
+      <img src="/Assets/kochi-1.jpeg" alt="Kochi" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+      <img src="https://img.hexahome.in/media/blogs/hexahome-blogs/lulu-mall-in-india/dn70m2.webp" alt="Kochi" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+    </div>
+    <div class="flex-1">
+      <div class="flex items-center gap-2 mb-1 text-[19px]">
+        <i class="fa-solid fa-shopping-bag text-pink-600"></i>
+        <span class="font-semibold">Day 9</span>
+      </div>
+      <span class="text-gray-700">Kochi – Visit Fort Kochi, museums – Stay at Radisson Blu</span>
+      <div class="text-sm text-gray-500">Explore Fort Kochi and museums, then stay at Radisson Blu.</div>
+    </div>
+  </div>
+  <!-- Day 10 -->
+  <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow p-4 md:p-6 gap-4">
+     <div class="grid grid-cols-2 gap-2">
+      <img src="https://cdn.bluebirdtravels.in/wp-content/uploads/kochi-ernakulam/kochi-airport-720x530.jpg" alt="Kochi" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.4V8zgpcqpNUiBX1uTdlSuwHaE0?pid=Api&P=0&h=180" alt="Kochi" class="object-cover rounded-md mb-2 md:mb-0 w-full h-full">
+    </div>
+    <div class="flex-1">
+      <div class="flex items-center gap-2 mb-1 text-[19px]">
+        <i class="fa-solid fa-plane-departure text-gray-700"></i>
+        <span class="font-semibold">Day 10</span>
+      </div>
+      <span class="text-gray-700">Departure</span>
+      <div class="text-sm text-gray-500">Departure from Kerala after a memorable 10-day tour.</div>
+    </div>
+  </div>
+</div>
                     </div>
+                    
+                    <div class="w-layout-hflex price-details flex flex-col md:flex-row">
+  <div class="w-layout-vflex price-column bg-green-50 rounded-xl shadow-lg p-6 md:m-2 m-0 w-full md:flex-1 border border-green-200 md:px-6 px-0 pl-4 md:pl-6">
+    <div class="heading-style-h4 text-green-700 font-bold mb-3 text-lg flex items-center gap-2" data-en="Price includes" data-ar="السعر يشمل">
+      <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+      Price includes
+    </div>
+    <div class="w-richtext">
+      <ul role="list" class="space-y-2">
+        <li class="flex items-center gap-2 text-gray-700"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span>9 nights in comfortable hotels & resorts</li>
+        
+        <li class="flex items-center gap-2 text-gray-700"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span>Private Toyota Innova with chauffeur</li>
+        <li class="flex items-center gap-2 text-gray-700"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span>Daily breakfast at all hotels</li>
+        <li class="flex items-center gap-2 text-gray-700"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span>All taxes and service charges</li>
+      </ul>
+    </div>
+  </div>
+  <div class="w-layout-vflex price-column bg-red-50 rounded-xl shadow-lg p-6 md:m-2 m-0 w-full md:flex-1 border border-red-200 md:px-6 px-0 pl-4 md:pl-6">
+    <div class="heading-style-h4 text-red-700 font-bold mb-3 text-lg flex items-center gap-2" data-en="Price excludes" data-ar="السعر لا يشمل">
+      <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+      Price excludes
+    </div>
+    <div class="w-richtext">
+      <ul role="list" class="space-y-2">
+        <li class="flex items-center gap-2 text-gray-700" data-en="International flight tickets" data-ar="تذاكر الطيران الدولي">
+          <span class="inline-block w-2 h-2 bg-red-400 rounded-full"></span>International flight tickets
+        </li>
+        <li class="flex items-center gap-2 text-gray-700" data-en="Entrance fees to tourist sites" data-ar="رسوم دخول المواقع السياحية">
+          <span class="inline-block w-2 h-2 bg-red-400 rounded-full"></span>Entrance fees to tourist sites
+        </li>
+        <li class="flex items-center gap-2 text-gray-700" data-en="Meals not mentioned" data-ar="الوجبات غير المذكورة">
+          <span class="inline-block w-2 h-2 bg-red-400 rounded-full"></span>Meals not mentioned
+        </li>
+        <li class="flex items-center gap-2 text-gray-700" data-en="Personal expenses" data-ar="المصاريف الشخصية">
+          <span class="inline-block w-2 h-2 bg-red-400 rounded-full"></span>Personal expenses
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+                  </div>
                  
-                    <div class="w-layout-hflex price-details">
-                      <div class="w-layout-vflex price-column">
-                        <div class="heading-style-h4" data-en="Price includes" data-ar="السعر يشمل">Price includes</div>
-                        <div class="w-richtext">
-                          <ul role="list">
-                            <li data-en="6 nights in 4 & 5-star hotels/resorts" data-ar="6 ليالٍ في فنادق/منتجعات 4 و5 نجوم">6 nights in 4- and 5-star hotels/resorts</li>
-                            <li data-en="Daily breakfast" data-ar="الإفطار اليومي">Daily breakfast in all hotels</li>
-                            <li data-en="Full board (3 meals) on houseboat" data-ar="نظام كامل (3 وجبات) على متن المنزل العائم">Full board (3 meals) on the houseboat</li>
-                            <li data-en="Private air-conditioned Innova with driver" data-ar="سيارة إنوفا مكيفة خاصة مع سائق">Private AC car with Arabic-speaking driver</li>
-                            <li data-en="All taxes and fees" data-ar="جميع الضرائب والرسوم">All taxes and service charges</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="w-layout-vflex price-column">
-                        <div class="heading-style-h4" data-en="Price excludes" data-ar="السعر لا يشمل">Price excludes</div>
-                        <div class="w-richtext">
-                          <ul role="list">
-                            <li data-en="International flight tickets" data-ar="تذاكر الطيران الدولي">International flight tickets</li>
-                            <li data-en="Entrance fees to tourist sites" data-ar="رسوم دخول المواقع السياحية">Entrance fees to tourist attractions and optional activities</li>
-                            <li data-en="Meals not mentioned" data-ar="الوجبات غير المذكورة">Meals not mentioned</li>
-                            <li data-en="Personal expenses" data-ar="المصاريف الشخصية">Personal expenses (spa, photography, souvenirs)</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-richtext">
-                      <p data-en="Our 10-Day Normal Package for Kerala is priced at $1,250 for 2 persons, offering a luxurious experience through God's Own Country with quality accommodations and private transportation." data-ar="تبلغ تكلفة حزمة كيرالا العادية لمدة 10 أيام 1250 دولارًا لشخصين، وتقدم تجربة فاخرة عبر بلد الله مع إقامة جودة ومواصلات خاصة.">Our 10-Day Normal Package for Kerala is priced at $1,250 for 2 persons, offering a luxurious experience through God's Own Country with quality accommodations and private transportation.</p>
-                      <p>‍</p>
-                      <h2 data-en="Highlights" data-ar="أبرز المعالم">Highlights</h2>
-                      <p data-en="This carefully curated package showcases Kerala's most beautiful landscapes and cultural treasures:" data-ar="تعرض هذه الحزمة التي تم اختيارها بعناية أجمل المناظر الطبيعية والكنوز الثقافية في كيرالا:">This carefully curated package showcases Kerala's highlights:</p>
-                      <ul role="list">
-                        <li data-en="Explore Kochi's colonial heritage" data-ar="استكشف التراث الاستعماري في كوتشي">Explore Kochi's colonial heritage</li>
-                        <li data-en="Visit Athirappilly's magnificent waterfalls" data-ar="زيارة شلالات أثيرابيلي الرائعة">Visit Athirappilly's magnificent waterfalls</li>
-                        <li data-en="Experience Munnar's tea gardens" data-ar="جرب حدائق الشاي في مونار">Experience Munnar's tea gardens</li>
-                        <li data-en="Wildlife safari in Thekkady" data-ar="سفاري الحياة البرية في ثيكادي">Wildlife safari in Thekkady</li>
-                        <li data-en="Houseboat stay in Alleppey backwaters" data-ar="إقامة في المنزل العائم بممرات أليبي المائية">Houseboat in Alleppey</li>
-                        <li data-en="Comfortable 5-star accommodations" data-ar="إقامة مريحة في فنادق 5 نجوم">Comfortable 5-star accommodations</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div data-w-tab="Tab 2" class="w-tab-pane">
-                    <div class="w-richtext">
-                      <h2 data-en="What to expect" data-ar="ما يمكن توقعه">What to expect</h2>
-                      <p data-en="Your Kerala journey combines luxury and natural beauty:" data-ar="تجمع رحلتك في كيرالا بين الفخامة والجمال الطبيعي:">Your Kerala journey combines luxury and natural beauty:</p>
-                      <ul role="list">
-                        <li data-en="5-star hotel accommodations" data-ar="إقامة في فنادق 5 نجوم">5-star hotel accommodations</li>
-                        <li data-en="Private transfers in AC Innova Crysta" data-ar="تنقلات خاصة في سيارة إنوفا كريستا مكيفة">Private transfers in a private Innova Crysta</li>
-                        <li data-en="Guided sightseeing tours" data-ar="جولات سياحية بإرشاد">Guided tours</li>
-                        <li data-en="Authentic Kerala cuisine on houseboat" data-ar="مأكولات كيرالا الأصيلة على المنزل العائم">Authentic Kerala cuisine</li>
-                        <li data-en="Good balance of activities and relaxation" data-ar="توازن جيد بين الأنشطة والاسترخاء">Balance of activities and relaxation</li>
-                      </ul>
-                    </div>
-                  </div>
                   <div data-w-tab="Tab 3" class="w-tab-pane">
                     <div class="w-layout-vflex tour-plan">
                    <div class="heading-style-h2" data-en="Tour plan" data-ar="خطة الجولة">Tour plan</div>
-                   <p class="no-margin" data-en="Our 10-day itinerary showcases Kerala's highlights with comfort and luxury:" data-ar="يعرض برنامجنا لمدة 10 أيام أبرز معالم كيرالا مع الراحة والفخامة:">Our 10-day itinerary showcases Kerala's highlights with comfort and luxury:</p>
+                   <p class="no-margin">📆 10-Day Kerala Tour Itinerary<br>✅ Normal Package (SAR 4,700) – Vehicle: Toyota Innova<br>10 Days / 9 Nights | Comfortable Hotels</p>
                     </div>
                     <div class="plan-wrapper">
                       <div class="w-layout-hflex starter-plan">
@@ -326,13 +451,11 @@
                             class="faq-dropdown faq-dropdown-two box-full-width w-dropdown">
                             <div class="faq-toggle faq-toggle-two w-dropdown-toggle">
                               <div class="heading-style-h6" data-en="Arrival in Kochi" data-ar="الوصول إلى كوتشي">Arrival in Kochi</div>
-                              <div
-                                style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
-                                class="faq-icon w-icon-dropdown-toggle"></div>
+                              <div class="faq-icon w-icon-dropdown-toggle"></div>
                             </div>
                             <nav style="height:0px" class="faq-list overflow-hidden w-dropdown-list">
                               <div class="faq-description-wrap faq-two">
-                                <p class="no-margin" data-en="Arrival at Kochi International Airport. Private transfer in Innova Crysta to a business hotel. City tour of Kochi: Jewish Town & Paradesi Synagogue, Fort Kochi & Chinese Fishing Nets, Marine Drive (Sunset view & shopping), Mattancherry Palace." data-ar="الوصول إلى مطار كوتشي الدولي. النقل الخاص في إنوفا كريستا إلى فندق أعمال. جولة في مدينة كوتشي: البلدة اليهودية وكنيس باراديسي، فورت كوتشي وشباك الصيد الصينية، مارين درايف (مشاهدة الغروب والتسوق)، قصر ماتانشيري.">Arrival at Kochi International Airport. Private transfer in Innova Crysta to a business hotel. City tour of Kochi: Jewish Town & Paradesi Synagogue, Fort Kochi & Chinese Fishing Nets, Marine Drive (Sunset view & shopping), Mattancherry Palace.</p>
+                                <p class="no-margin">Arrival in Kochi – Check-in at Holiday Inn</p>
                               </div>
                             </nav>
                           </div>
@@ -350,14 +473,12 @@
                           <div data-delay="300" data-hover="false" data-w-id="d85cff82-1d8f-54d4-e326-9311504a6324"
                             class="faq-dropdown faq-dropdown-two box-full-width w-dropdown">
                             <div class="faq-toggle faq-toggle-two w-dropdown-toggle">
-                              <div class="heading-style-h6" data-en="Athirappilly Day Trip" data-ar="رحلة يومية إلى أثيرابيلي">Athirappilly Day Trip</div>
-                              <div
-                                style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
-                                class="faq-icon w-icon-dropdown-toggle"></div>
+                              <div class="heading-style-h6" data-en="Travel to Munnar" data-ar="السفر إلى مونار">Travel to Munnar</div>
+                              <div class="faq-icon w-icon-dropdown-toggle"></div>
                             </div>
                             <nav style="height:0px" class="faq-list overflow-hidden w-dropdown-list">
                               <div class="faq-description-wrap faq-two">
-                                <p class="no-margin" data-en="Early breakfast and depart for Athirappilly (70 km, 2.5–3 hrs). Travel in a comfortable Innova Crysta. River tour and sightseeing: Sholayar forest views, Charpa Waterfall, Vazhachal Waterfall, Athirappilly Waterfall. Check-in at Niraamaya Athirappilly." data-ar="إفطار مبكر والمغادرة إلى أثيرابيلي (70 كم، 2.5-3 ساعات). السفر في سيارة إنوفا كريستا مريحة. جولة نهرية ومشاهدة المعالم: مناظر غابة شولايار، شلال شاربا، شلال فازاشال، شلال أثيرابيلي. تسجيل الوصول في نيراميا أثيرابيلي.">Early breakfast and depart for Athirappilly (70 km, 2.5–3 hrs). Travel in a comfortable Innova Crysta. River tour and sightseeing: Sholayar forest views, Charpa Waterfall, Vazhachal Waterfall, Athirappilly Waterfall. Check-in at Niraamaya Athirappilly.</p>
+                                <p class="no-margin">Drive to Munnar – Enjoy the luxury drive – Stay at Blanket Hotel</p>
                               </div>
                             </nav>
                           </div>
@@ -365,7 +486,7 @@
                       </div>
                       <div class="w-layout-hflex starter-plan">
                         <div class="days">
-                          <div class="heading-style-h6 text-color-orange" data-en="Day 03" data-ar="اليوم الثالث">Day 03</div>
+                          <div class="heading-style-h6 text-color-orange" data-en="Day 03"  >Day 03</div>
                         </div>
                         <div class="w-layout-hflex timeline-wrapper">
                           <div class="w-layout-vflex timeline">
@@ -375,14 +496,12 @@
                           <div data-delay="300" data-hover="false" data-w-id="ea84c1e0-53a9-27a4-ca47-60106d6c4c91"
                             class="faq-dropdown faq-dropdown-two box-full-width w-dropdown">
                             <div class="faq-toggle faq-toggle-two w-dropdown-toggle">
-                              <div class="heading-style-h6" data-en="Travel to Munnar" data-ar="السفر إلى مونار">Travel to Munnar</div>
-                              <div
-                                style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
-                                class="faq-icon w-icon-dropdown-toggle"></div>
+                              <div class="heading-style-h6" data-en="Munnar Full-Day Tour" data-ar="جولة يوم كامل في مونار">Munnar Sightseeing</div>
+                              <div class="faq-icon w-icon-dropdown-toggle"></div>
                             </div>
                             <nav style="height:0px" class="faq-list overflow-hidden w-dropdown-list">
                               <div class="faq-description-wrap faq-two">
-                                <p class="no-margin" data-en="Breakfast and drive to Munnar (130 km, 4–5 hrs). En route visits: Cheeyappara & Valara Waterfalls, Spice Plantations. Check-in at Fog Munnar Hotel." data-ar="الإفطار والقيادة إلى مونار (130 كم، 4-5 ساعات). زيارات في الطريق: شلالات تشييابارا وفالارا، مزارع التوابل. تسجيل الوصول في فندق فوج مونار.">Breakfast and drive to Munnar (130 km, 4–5 hrs). En route visits: Cheeyappara & Valara Waterfalls, Spice Plantations. Check-in at Fog Munnar Hotel.</p>
+                                <p class="no-margin">Munnar – Private guided sightseeing – Stay at Blanket Hotel</p>
                               </div>
                             </nav>
                           </div>
@@ -390,7 +509,7 @@
                       </div>
                       <div class="w-layout-hflex starter-plan">
                         <div class="days">
-                          <div class="heading-style-h6 text-color-orange" data-en="Day 04" data-ar="اليوم الرابع">Day 04</div>
+                          <div class="heading-style-h6 text-color-orange" data-en="Day 04">Day 04</div>
                         </div>
                         <div class="w-layout-hflex timeline-wrapper">
                           <div class="w-layout-vflex timeline">
@@ -400,14 +519,12 @@
                           <div data-delay="300" data-hover="false" data-w-id="c649389b-41ff-0fd0-f0e7-c949e6d8bdef"
                             class="faq-dropdown faq-dropdown-two box-full-width border-bottom-off w-dropdown">
                             <div class="faq-toggle faq-toggle-two w-dropdown-toggle">
-                              <div class="heading-style-h6" data-en="Munnar Sightseeing" data-ar="مشاهدة معالم مونار">Munnar Sightseeing</div>
-                              <div
-                                style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
-                                class="faq-icon w-icon-dropdown-toggle"></div>
+                              <div class="heading-style-h6" data-en="Travel to Thekkady" data-ar="السفر إلى تيكادي">Travel to Thekkady</div>
+                              <div class="faq-icon w-icon-dropdown-toggle"></div>
                             </div>
                             <nav style="height:0px" class="faq-list overflow-hidden w-dropdown-list">
                               <div class="faq-description-wrap faq-two">
-                                <p class="no-margin" data-en="Full-day tour in Munnar: Eravikulam National Park (See Nilgiri Tahr), Echo Point, Kundala Lake, Tea Museum, Mattupetty Dam & Lake (boating available). Stay at Fog Munnar Hotel." data-ar="جولة ليوم كامل في مونار: منتزه إرافيكولام الوطني (مشاهدة طهر النيلجيري)، نقطة الصدى، بحيرة كوندالا، متحف الشاي، سد ماتوبيتي وبحيرة (رحلات القوارب متاحة). الإقامة في فندق فوج مونار.">Full-day tour in Munnar: Eravikulam National Park (See Nilgiri Tahr), Echo Point, Kundala Lake, Tea Museum, Mattupetty Dam & Lake (boating available). Stay at Fog Munnar Hotel.</p>
+                                <p class="no-margin">Drive to Thekkady – Visit spice plantations – Stay at Hills & Hues</p>
                               </div>
                             </nav>
                           </div>
@@ -415,7 +532,7 @@
                       </div>
                       <div class="w-layout-hflex starter-plan">
                         <div class="days">
-                          <div class="heading-style-h6 text-color-orange" data-en="Day 05" data-ar="اليوم الخامس">Day 05</div>
+                          <div class="heading-style-h6 text-color-orange" data-en="Day 05">Day 05</div>
                         </div>
                         <div class="w-layout-hflex timeline-wrapper">
                           <div class="w-layout-vflex timeline">
@@ -425,97 +542,22 @@
                           <div data-delay="300" data-hover="false" data-w-id="c649389b-41ff-0fd0-f0e7-c949e6d8bdef"
                             class="faq-dropdown faq-dropdown-two box-full-width border-bottom-off w-dropdown">
                             <div class="faq-toggle faq-toggle-two w-dropdown-toggle">
-                              <div class="heading-style-h6" data-en="Local Munnar Experiences" data-ar="تجارب مونار المحلية">Local Munnar Experiences</div>
-                              <div
-                                style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
-                                class="faq-icon w-icon-dropdown-toggle"></div>
+                              <div class="heading-style-h6" data-en="Travel to Alleppey" data-ar="السفر إلى أليبي">Travel to Alleppey</div>
+                              <div class="faq-icon w-icon-dropdown-toggle"></div>
                             </div>
                             <nav style="height:0px" class="faq-list overflow-hidden w-dropdown-list">
                               <div class="faq-description-wrap faq-two">
-                                <p class="no-margin" data-en="Optional activities and free day: Tea estate tour and factory visit, Ayurvedic spa and massage session, Jeep Safari to Kolukkumalai (Optional). Travel to Thekkady (95 km, 3–4 hrs). En route: Spice Garden Tour, Lockhart Gap Viewpoint. Check-in at Abad Hotel." data-ar="أنشطة اختيارية ويوم حر: جولة في مزرعة الشاي وزيارة المصنع، جلسة سبا وتدليك أيورفيدا، سفاري جيب إلى كولوكومالاي (اختياري). السفر إلى ثيكادي (95 كم، 3-4 ساعات). في الطريق: جولة في حديقة التوابل، نقطة مشاهدة فجوة لوكهارت. تسجيل الوصول في فندق أباد.">Optional activities and free day: Tea estate tour and factory visit, Ayurvedic spa and massage session, Jeep Safari to Kolukkumalai (Optional). Travel to Thekkady (95 km, 3–4 hrs). En route: Spice Garden Tour, Lockhart Gap Viewpoint. Check-in at Abad Hotel.</p>
+                                <p class="no-margin">Drive to Alleppey – Check-in to Luxury Houseboat</p>
                               </div>
                             </nav>
                           </div>
                         </div>
                       </div>
+    
+    
                       <div class="w-layout-hflex starter-plan">
                         <div class="days">
-                          <div class="heading-style-h6 text-color-orange" data-en="Day 06" data-ar="اليوم السادس">Day 06</div>
-                        </div>
-                        <div class="w-layout-hflex timeline-wrapper">
-                          <div class="w-layout-vflex timeline">
-                            <div class="small-round-box"></div>
-                            <div class="line"></div>
-                          </div>
-                          <div data-delay="300" data-hover="false" data-w-id="c649389b-41ff-0fd0-f0e7-c949e6d8bdef"
-                            class="faq-dropdown faq-dropdown-two box-full-width border-bottom-off w-dropdown">
-                            <div class="faq-toggle faq-toggle-two w-dropdown-toggle">
-                              <div class="heading-style-h6" data-en="Thekkady Adventures" data-ar="مغامرات ثيكادي">Thekkady Adventures</div>
-                              <div
-                                style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
-                                class="faq-icon w-icon-dropdown-toggle"></div>
-                            </div>
-                            <nav style="height:0px" class="faq-list overflow-hidden w-dropdown-list">
-                              <div class="faq-description-wrap faq-two">
-                                <p class="no-margin" data-en="Explore Thekkady with optional activities: Elephant ride and bathing experience, Traditional Kathakali dance performance, Kalaripayattu martial arts show (Optional), Boat ride in Periyar Wildlife Sanctuary. Stay at Abad Hotel." data-ar="استكشف ثيكادي مع أنشطة اختيارية: ركوب الفيل وتجربة الاستحمام، عرض رقص كاثاكالي التقليدي، عرض فنون كالاريباياتو القتالية (اختياري)، رحلة بالقارب في محمية بيريار للحياة البرية. الإقامة في فندق أباد.">Explore Thekkady with optional activities: Elephant ride and bathing experience, Traditional Kathakali dance performance, Kalaripayattu martial arts show (Optional), Boat ride in Periyar Wildlife Sanctuary. Stay at Abad Hotel.</p>
-                              </div>
-                            </nav>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="w-layout-hflex starter-plan">
-                        <div class="days">
-                          <div class="heading-style-h6 text-color-orange" data-en="Day 07" data-ar="اليوم السابع">Day 07</div>
-                        </div>
-                        <div class="w-layout-hflex timeline-wrapper">
-                          <div class="w-layout-vflex timeline">
-                            <div class="small-round-box"></div>
-                            <div class="line"></div>
-                          </div>
-                          <div data-delay="300" data-hover="false" data-w-id="c649389b-41ff-0fd0-f0e7-c949e6d8bdef"
-                            class="faq-dropdown faq-dropdown-two box-full-width border-bottom-off w-dropdown">
-                            <div class="faq-toggle faq-toggle-two w-dropdown-toggle">
-                              <div class="heading-style-h6" data-en="Thekkady to Alappuzha" data-ar="من ثيكادي إلى ألابوزا">Thekkady to Alappuzha</div>
-                              <div
-                                style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
-                                class="faq-icon w-icon-dropdown-toggle"></div>
-                            </div>
-                            <nav style="height:0px" class="faq-list overflow-hidden w-dropdown-list">
-                              <div class="faq-description-wrap faq-two">
-                                <p class="no-margin" data-en="Drive to Alappuzha (140 km, 4–5 hrs). Sightseeing: Alappuzha Beach, Mullakkal Temple, Local handicrafts and coconut industry. Check-in at Deshadan Hotel." data-ar="القيادة إلى ألابوزا (140 كم، 4-5 ساعات). مشاهدة المعالم: شاطئ ألابوزا، معبد مولاكال، الحرف اليدوية المحلية وصناعة جوز الهند. تسجيل الوصول في فندق ديشادان.">Drive to Alappuzha (140 km, 4–5 hrs). Sightseeing: Alappuzha Beach, Mullakkal Temple, Local handicrafts and coconut industry. Check-in at Deshadan Hotel.</p>
-                              </div>
-                            </nav>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="w-layout-hflex starter-plan">
-                        <div class="days">
-                          <div class="heading-style-h6 text-color-orange" data-en="Day 08" data-ar="اليوم الثامن">Day 08</div>
-                        </div>
-                        <div class="w-layout-hflex timeline-wrapper">
-                          <div class="w-layout-vflex timeline">
-                            <div class="small-round-box"></div>
-                            <div class="line"></div>
-                          </div>
-                          <div data-delay="300" data-hover="false" data-w-id="c649389b-41ff-0fd0-f0e7-c949e6d8bdef"
-                            class="faq-dropdown faq-dropdown-two box-full-width border-bottom-off w-dropdown">
-                            <div class="faq-toggle faq-toggle-two w-dropdown-toggle">
-                              <div class="heading-style-h6" data-en="Houseboat Experience" data-ar="تجربة المنزل العائم">Houseboat Experience</div>
-                              <div
-                                style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
-                                class="faq-icon w-icon-dropdown-toggle"></div>
-                            </div>
-                            <nav style="height:0px" class="faq-list overflow-hidden w-dropdown-list">
-                              <div class="faq-description-wrap faq-two">
-                                <p class="no-margin" data-en="Check-in to luxury houseboat at 12 noon. Route: Vembanad Lake and Kerala backwaters. Traditional Kerala meals on board. Sunset views and overnight stay on the water." data-ar="تسجيل الوصول إلى المنزل العائم الفاخر في الساعة 12 ظهرًا. المسار: بحيرة فيمباناد وممرات كيرالا المائية. وجبات كيرالا التقليدية على متن القارب. مناظر غروب الشمس والإقامة الليلية على الماء.">Check-in to luxury houseboat at 12 noon. Route: Vembanad Lake and Kerala backwaters. Traditional Kerala meals on board. Sunset views and overnight stay on the water.</p>
-                              </div>
-                            </nav>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="w-layout-hflex starter-plan">
-                        <div class="days">
-                          <div class="heading-style-h6 text-color-orange" data-en="Day 09" data-ar="اليوم التاسع">Day 09</div>
+                          <div class="heading-style-h6 text-color-orange" data-en="Day 06">Day 06</div>
                         </div>
                         <div class="w-layout-hflex timeline-wrapper">
                           <div class="w-layout-vflex timeline">
@@ -526,21 +568,21 @@
                             class="faq-dropdown faq-dropdown-two box-full-width border-bottom-off w-dropdown">
                             <div class="faq-toggle faq-toggle-two w-dropdown-toggle">
                               <div class="heading-style-h6" data-en="Return to Kochi" data-ar="العودة إلى كوتشي">Return to Kochi</div>
-                              <div
-                                style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
-                                class="faq-icon w-icon-dropdown-toggle"></div>
+                              <div class="faq-icon w-icon-dropdown-toggle"></div>
                             </div>
                             <nav style="height:0px" class="faq-list overflow-hidden w-dropdown-list">
                               <div class="faq-description-wrap faq-two">
-                                <p class="no-margin" data-en="After breakfast, check out from the houseboat and head to Kochi (60 km, 1.5–2 hrs). Kochi city tour: St. Francis Church (Oldest European Church in India), Lulu Mall (Shopping & food), Kerala Folklore Museum. Stay at a business hotel." data-ar="بعد الإفطار، تسجيل الخروج من المنزل العائم والتوجه إلى كوتشي (60 كم، 1.5-2 ساعة). جولة في مدينة كوتشي: كنيسة القديس فرانسيس (أقدم كنيسة أوروبية في الهند)، مول لولو (التسوق والطعام)، متحف كيرالا للفولكلور. الإقامة في فندق أعمال.">After breakfast, check out from the houseboat and head to Kochi (60 km, 1.5–2 hrs). Kochi city tour: St. Francis Church (Oldest European Church in India), Lulu Mall (Shopping & food), Kerala Folklore Museum. Stay at a business hotel.</p>
+                                <p class="no-margin">Return to Kochi – Stay at Radisson Blu</p>
                               </div>
                             </nav>
                           </div>
                         </div>
                       </div>
+    
+    
                       <div class="w-layout-hflex starter-plan">
                         <div class="days">
-                          <div class="heading-style-h6 text-color-orange" data-en="Day 10" data-ar="اليوم العاشر">Day 10</div>
+                          <div class="heading-style-h6 text-color-orange" data-en="Day 07">Day 07</div>
                         </div>
                         <div class="w-layout-hflex timeline-wrapper">
                           <div class="w-layout-vflex timeline">
@@ -551,13 +593,11 @@
                             class="faq-dropdown faq-dropdown-two box-full-width border-bottom-off w-dropdown">
                             <div class="faq-toggle faq-toggle-two w-dropdown-toggle">
                               <div class="heading-style-h6" data-en="Departure from Kochi" data-ar="المغادرة من كوتشي">Departure from Kochi</div>
-                              <div
-                                style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
-                                class="faq-icon w-icon-dropdown-toggle"></div>
+                              <div class="faq-icon w-icon-dropdown-toggle"></div>
                             </div>
                             <nav style="height:0px" class="faq-list overflow-hidden w-dropdown-list">
                               <div class="faq-description-wrap faq-two">
-                                <p class="no-margin" data-en="Free time for last-minute shopping or optional spa session. Transfer to Kochi International Airport (COK)." data-ar="وقت حر للتسوق في اللحظة الأخيرة أو جلسة سبا اختيارية. النقل إلى مطار كوتشي الدولي (COK).">Free time for last-minute shopping or optional spa session. Transfer to Kochi International Airport (COK).</p>
+                                <p class="no-margin">Departure</p>
                               </div>
                             </nav>
                           </div>
@@ -565,100 +605,26 @@
                       </div>
                     </div>
                   </div>
-                  <div data-w-tab="Tab 4" class="w-tab-pane">
-                    <div class="w-layout-vflex tour-plan">
-                      <div class="heading-style-h2" data-en="Frequently asked questions" data-ar="الأسئلة الشائعة">Frequently asked questions</div>
-                      <p class="no-margin" data-en="Here are answers to some common questions about our 10-Day Normal Kerala Package:" data-ar="إليك إجابات لبعض الأسئلة الشائعة حول حزمة كيرالا العادية لمدة 10 أيام:">Here are answers to some common questions:</p>
-                    </div>
-                    <div class="accordian-wrapper">
-                      <div class="faq-dropdown faq-dropdown-two w-dropdown">
-                        <div class="faq-toggle faq-toggle-three w-dropdown-toggle">
-                          <div class="heading-style-h6" data-en="What hotels are included?" data-ar="ما هي الفنادق المدرجة؟">What hotels are included?</div>
-                          <div class="faq-icon w-icon-dropdown-toggle"></div>
-                        </div>
-                        <nav style="height:0px" class="faq-list overflow-hidden w-dropdown-list">
-                          <div class="faq-description-wrap faq-two">
-                            <p class="no-margin" data-en="The package includes a business hotel in Kochi, Niraamaya Athirappilly, Fog Munnar Hotel, Abad Hotel in Thekkady, Deshadan Hotel in Alleppey, and a luxury houseboat." data-ar="تشمل الحزمة فندق أعمال في كوتشي، نيراميا أثيرابيلي، فندق فوج مونار، فندق أباد في ثيكادي، فندق ديشادان في أليبي، ومنزل عائم فاخر.">The package includes a business hotel in Kochi, Niraamaya Athirappilly, Fog Munnar Hotel, Abad Hotel in Thekkady, Deshadan Hotel in Alleppey, and a luxury houseboat.</p>
-                          </div>
-                        </nav>
-                      </div>
-                      
-                      <div class="faq-dropdown faq-dropdown-two w-dropdown">
-                        <div class="faq-toggle faq-toggle-three w-dropdown-toggle">
-                          <div class="heading-style-h6" data-en="What meals are included?" data-ar="ما هي الوجبات المدرجة؟">What meals are included?</div>
-                          <div class="faq-icon w-icon-dropdown-toggle"></div>
-                        </div>
-                        <nav style="height:0px" class="faq-list overflow-hidden w-dropdown-list">
-                          <div class="faq-description-wrap faq-two">
-                            <p class="no-margin" data-en="Daily breakfast at all hotels is included, plus all meals (lunch, dinner, next day breakfast) during your luxury houseboat stay. Other meals can be arranged at additional cost." data-ar="الإفطار اليومي في جميع الفنادق مدرج، بالإضافة إلى جميع الوجبات (غداء، عشاء، إفطار اليوم التالي) خلال إقامتك في المنزل العائم الفاخر. يمكن ترتيب وجبات أخرى بتكلفة إضافية.">Daily breakfast at all hotels is included, plus all meals (lunch, dinner, next day breakfast) during your luxury houseboat stay. Other meals can be arranged at additional cost.</p>
-                          </div>
-                        </nav>
-                      </div>
-                      
-                      <div class="faq-dropdown faq-dropdown-two w-dropdown">
-                        <div class="faq-toggle faq-toggle-three w-dropdown-toggle">
-                          <div class="heading-style-h6" data-en="What's included in the houseboat experience?" data-ar="ما المدرج في تجربة المنزل العائم؟">What's included in the houseboat experience?</div>
-                          <div class="faq-icon w-icon-dropdown-toggle"></div>
-                        </div>
-                        <nav style="height:0px" class="faq-list overflow-hidden w-dropdown-list">
-                          <div class="faq-description-wrap faq-two">
-                            <p class="no-margin" data-en="Your luxury houseboat includes a private cabin with attached bathroom, sun deck, dining area, and crew (captain, chef and helper). All meals (Kerala cuisine), evening tea, and overnight stay on the backwaters are included." data-ar="يتضمن المنزل العائم الفاخر كابينة خاصة مع حمام متصل، سطح شمسي، منطقة لتناول الطعام، وطاقم (قبطان، طاهٍ ومساعد). جميع الوجبات (مطبخ كيرالا)، شاي المساء، والإقامة الليلية في الممرات المائية مدرجة.">Your luxury houseboat includes a private cabin with attached bathroom, sun deck, dining area, and crew (captain, chef and helper). All meals (Kerala cuisine), evening tea, and overnight stay on the backwaters are included.</p>
-                          </div>
-                        </nav>
-                      </div>
-                      
-                      <div class="faq-dropdown faq-dropdown-two w-dropdown">
-                        <div class="faq-toggle faq-toggle-three w-dropdown-toggle">
-                          <div class="heading-style-h6" data-en="Is this suitable for families with children?" data-ar="هل هذا مناسب للعائلات التي لديها أطفال؟">Is this suitable for families with children?</div>
-                          <div class="faq-icon w-icon-dropdown-toggle"></div>
-                        </div>
-                        <nav style="height:0px" class="faq-list overflow-hidden w-dropdown-list">
-                          <div class="faq-description-wrap faq-two">
-                            <p class="no-margin" data-en="Yes, this package is family-friendly. We can arrange extra beds for children and adjust activities accordingly. The houseboat experience is particularly enjoyable for children." data-ar="نعم، هذه الحزمة مناسبة للعائلات. يمكننا ترتيب أسرة إضافية للأطفال وتعديل الأنشطة وفقًا لذلك. تجربة المنزل العائم ممتعة بشكل خاص للأطفال.">Yes, this package is family-friendly. We can arrange extra beds for children and adjust activities accordingly. The houseboat experience is particularly enjoyable for children.</p>
-                          </div>
-                        </nav>
-                      </div>
-                      
-                      <div class="faq-dropdown faq-dropdown-two w-dropdown">
-                        <div class="faq-toggle faq-toggle-three w-dropdown-toggle">
-                          <div class="heading-style-h6" data-en="Can we customize the itinerary?" data-ar="هل يمكننا تخصيص البرنامج؟">Can we customize the itinerary?</div>
-                          <div class="faq-icon w-icon-dropdown-toggle"></div>
-                        </div>
-                        <nav style="height:0px" class="faq-list overflow-hidden w-dropdown-list">
-                          <div class="faq-description-wrap faq-two">
-                            <p class="no-margin" data-en="We can tailor the itinerary to your preferences - extend stays, add special experiences, or adjust activities. Contact us to discuss customization options." data-ar="بالتأكيد! يمكننا تخصيص البرنامج حسب تفضيلاتك - تمديد الإقامة، إضافة تجارب خاصة، أو تعديل الأنشطة. اتصل بنا لمناقشة خيارات التخصيص.">We can tailor the itinerary to your preferences - extend stays, add special experiences, or adjust activities. Contact us to discuss customization options.</p>
-                          </div>
-                        </nav>
-                      </div>
-                    </div>
-                  </div>
+                  
                 </div>
             </div>
           </div>
           <div class="w-layout-vflex trip-details-about-right">
             <div class="trip-right-box-one">
-              <div class="w-layout-vflex trip-price">
+                    <div class="w-layout-vflex trip-price">
                 <div class="heading-style-h6" data-en="Price" data-ar="السعر">Price</div>
                 <div class="w-layout-hflex price-box">
                   <img src="https://cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/67613fd2b3cc9e5772a048bc_Tag Icon.svg" loading="lazy" alt="Icon" />
                   <div class="w-layout-vflex price-gap">
                     <div class="w-layout-hflex currency-selector">
-                      <div class="heading-style-h5 text-dark" id="current-price">$1,250 USD</div>
-                      <div class="original-price">$1,500 USD</div>
-                      <div class="currency-dropdown">
-                        <button class="currency-dropbtn">▼</button>
-                        <div class="currency-dropdown-content">
-                          <a href="#" data-currency="USD" data-price="1250" data-original="1500">USD: $1,250</a>
-                          <a href="#" data-currency="SAR" data-price="3750" data-original="4500">SAR: 3,750</a>
-                          <a href="#" data-currency="OMR" data-price="386" data-original="463">OMR: 386</a>
-                          <a href="#" data-currency="QAR" data-price="3620" data-original="4344">QAR: 3,620</a>
-                        </div>
-                      </div>
+                      <div class="heading-style-h5 text-dark" id="current-price">SAR 4,700</div>
+                      <div class="original-price" style="display:none;"></div>
+                      <!-- Currency dropdown removed, only SAR shown -->
                     </div>
-                    <div class="price-per-person" id="price-per-person">$625 USD per person</div>
+                   
                   </div>
                 </div>
-                <div class="offerd-text" data-en="Special price for 2 persons" data-ar="سعر خاص لشخصين">Special price for 2 persons</div>
+               
               </div>
               <div data-current="Booking form" data-easing="ease" data-duration-in="300" data-duration-out="100"
                 class="w-tabs">
@@ -666,9 +632,7 @@
                   <a data-w-tab="Booking form" class="form-tab-link w-inline-block w-tab-link w--current">
                     <div class="tab-text-center" data-en="Booking" data-ar="الحجز">Booking</div>
                   </a>
-                  <a data-w-tab="Enquiry form" class="form-tab-link w-inline-block w-tab-link">
-                    <div class="tab-text-center" data-en="Inquiry form" data-ar="نموذج الاستفسار">Inquiry form</div>
-                  </a>
+                  
                 </div>
                 <div class="space-large w-tab-content">
                   <div data-w-tab="Booking form" class="w-tab-pane w--tab-active">
@@ -686,186 +650,29 @@
                                 id="quantity" name="quantity" min="1"
                                 class="w-commerce-commerceaddtocartquantityinput quantity" value="2" />
                             </div>
-                            <input type="submit" class="w-commerce-commerceaddtocartbutton button button-full-width"
-                              value="Call to Book" data-en="Call to Book" data-ar="اتصل للحجز" />
+                            
                           </form>
                         </div>
                       </div>
                       <div class="contact-info" style="margin-top: 20px; text-align: center;">
-                        <p>Or contact us directly:</p>
-                        <a href="tel:+918590061859" class="w-commerce-commerceaddtocartbutton button button-full-width" style="background-color: #25D366; color: white;">
-                          <i class="fab fa-whatsapp"></i> WhatsApp: +91 8590061859
+                    
+                        <a id="whatsapp-booking-btn" href="#" class="w-commerce-commerceaddtocartbutton button button-full-width" style="background-color: #25D366; color: white;">
+                          <i class="fab fa-whatsapp"></i> WhatsApp: +91 85900 61859
                         </a>
                       </div>
                     </div>
                   </div>
-                  <div data-w-tab="Enquiry form" class="w-tab-pane">
-                    <div class="no-margin w-form">
-                      <form id="enquiry-form" name="enquiry-form" method="get">
-                        <input class="input-field-two margin-bottom-ten w-input" maxlength="256" name="name"
-                          placeholder="Your name*" type="text" id="name" required="" data-en-placeholder="Your name*" data-ar-placeholder="اسمك*" />
-                        <input class="input-field-two margin-bottom-ten w-input" maxlength="256" name="email"
-                          placeholder="Your email*" type="email" id="email" required="" data-en-placeholder="Your email*" data-ar-placeholder="بريدك الإلكتروني*" />
-                        <input class="input-field-two margin-bottom-ten w-input" maxlength="256" name="phone"
-                          placeholder="Phone no.*" type="tel" id="phone" required="" data-en-placeholder="Phone no.*" data-ar-placeholder="رقم الهاتف*" />
-                        <textarea id="message" name="message" maxlength="5000"
-                          placeholder="Message" class="textarea text-area-one w-input" data-en-placeholder="Message" data-ar-placeholder="رسالة"></textarea>
-                        <label class="w-checkbox checkbox-field check-field-one">
-                          <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox form-checkbox"></div>
-                          <input type="checkbox" name="terms" id="terms" required
-                            style="opacity:0;position:absolute;z-index:-1" />
-                          <span class="checkbox-label w-form-label" for="terms" data-en="I accept all " data-ar="أوافق على جميع ">
-                            I accept all <span class="text-color-orange" data-en="Terms & conditions" data-ar="الشروط والأحكام">
-                              Terms & conditions</span>
-                            <span data-en="for this journey" data-ar="لهذه الرحلة">for this journey</span>
-                          </span>
-                        </label>
-                        <input type="submit" data-wait="Please wait..."
-                          class="button button-full-width w-button" value="Submit Enquiry" data-en-value="Submit Enquiry" data-ar-value="إرسال الاستفسار" />
-                      </form>
-                      <div class="success-message w-form-done" style="display:none;">
-                        <div data-en="Thank you! Your submission has been received!" data-ar="شكرًا لك! تم استلام طلبك!">Thank you! Your submission has been received!</div>
-                      </div>
-                      <div class="error-message w-form-fail" style="display:none;">
-                        <div data-en="Oops! Something went wrong while submitting the form." data-ar="عذرًا! حدث خطأ ما أثناء إرسال النموذج.">Oops! Something went wrong while submitting the form.</div>
-                      </div>
-                    </div>
-                  </div>
+                 
                 </div>
               </div>
             </div>
-            <div class="best-plan-left">
-              <div class="heading-style-h5 text-dark" data-en="Package Highlights" data-ar="أبرز ميزات الباقة">Package Highlights</div>
-              <div class="package-highlights">
-                <ul>
-                  <li>10-Day Normal Kerala Package</li>
-                  <li>5-star hotels + Luxury Houseboat</li>
-                  <li>Private AC Innova Crysta with Driver</li>
-                  <li>Daily Breakfast + All Meals on Houseboat</li>
-                  <li>Guided Sightseeing & Cultural Experiences</li>
-                  <li>Covers Kochi, Athirappilly, Munnar, Thekkady, Alleppey</li>
-                </ul>
-              </div>
-            </div>
+         
           </div>
           
         </div>
       </div>
     </section>
-    <section class="other-destinaitons">
-      <div class="w-layout-blockcontainer container w-container">
-        <div class="w-layout-vflex other-destination-main">
-          <h2 class="no-margin">Related Packages</h2>
-          <div class="w-dyn-list">
-            <div role="list" class="hot-deals-items-wrap w-dyn-items">
-              <div role="listitem" class="w-dyn-item">
-                <a href="7-days-standard-package.html" class="hot-deals-card hot-deals-card-two w-inline-block">
-                  <div class="card-one-top-box">
-                    <img class="card-image" src="../Assets/munnar.jpg" width="299.5" height="238" alt=""
-                      sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 991px) 47vw, (max-width: 1439px) 23vw, 300px"
-                      data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
-                      loading="lazy" />
-                    <div class="w-layout-vflex offer-box">
-                      <div class="offer-text featured w-dyn-bind-empty"></div>
-                      <div class="offer-text off" data-en="10% off" data-ar="خصم 10%">10% off</div>
-                    </div>
-                  </div>
-                  <div class="card-one-information">
-                    <div class="w-layout-hflex card-one-top">
-                      <div class="w-layout-hflex card-one-rating">
-                        <img width="16" height="17" alt="Icon"
-                          src="https://cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/671b618e1c1b5cffd4b5015d_Rating Star.svg"
-                          loading="lazy" />
-                        <div class="small-text" >5</div>
-                      </div>
-                      <div class="small-text"  ><i class="fa-solid fa-clock "></i> &nbsp;8 Nights - 7 Days</div>
-                    </div>
-                    <div class="small-text margin-bottom-ten"  >Destinations - Kochi to Alleppey </div>
-                    <div class="heading-style-h6 margin-bottom-ten" >7 Days Standard Package</div>
-                    <div class="w-layout-hflex card-price">
-                    
-                      <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
-                        class="card-one-sell-price" >15 + Destinations</div>
-                      
-                    </div>
-                  </div>
-                </a>
-              </div>
-              
-              <div role="listitem" class="w-dyn-item">
-                <a href="7-days-premium.html" class="hot-deals-card hot-deals-card-two w-inline-block">
-                  <div class="card-one-top-box">
-                    <img class="card-image" src="../Assets/wayanad-2.jpg" width="299.5" height="238" alt=""
-                      sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 991px) 47vw, (max-width: 1439px) 23vw, 300px"
-                      data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
-                      loading="lazy" />
-                    <div class="w-layout-vflex offer-box">
-                      <div class="offer-text featured w-dyn-bind-empty"></div>
-                      <div class="offer-text off" data-en="10% off" data-ar="خصم 10%">10% off</div>
-                    </div>
-                  </div>
-                  <div class="card-one-information">
-                    <div class="w-layout-hflex card-one-top">
-                      <div class="w-layout-hflex card-one-rating">
-                        <img width="16" height="17" alt="Icon"
-                          src="https://cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/671b618e1c1b5cffd4b5015d_Rating Star.svg"
-                          loading="lazy" />
-                        <div class="small-text" >4.9</div>
-                      </div>
-                      <div class="small-text"  ><i class="fa-solid fa-clock "></i> &nbsp;8 Nights - 7 Days</div>
-                    </div>
-                    <div class="small-text margin-bottom-ten"  >Destinations - Kochi to Alleppey </div>
-                    <div class="heading-style-h6 margin-bottom-ten" >7 Days Premium Package</div>
-                    <div class="w-layout-hflex card-price">
-                    
-                      <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
-                        class="card-one-sell-price" >15 + Destinations</div>
-                      
-                    </div>
-                  </div>
-                </a>
-              </div>
-              
-               <!-- Card 2 -->
-               <div role="listitem" class="w-dyn-item">
-                <a href="10-days-premium.html" class="hot-deals-card hot-deals-card-two w-inline-block">
-                  <div class="card-one-top-box">
-                    <img class="card-image" src="../Assets/varkala-3.jpg" width="299.5" height="238" alt=""
-                      sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 991px) 47vw, (max-width: 1439px) 23vw, 300px"
-                      data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
-                      loading="lazy" />
-                    <div class="w-layout-vflex offer-box">
-                      <div class="offer-text featured w-dyn-bind-empty"></div>
-                      <div class="offer-text off" data-en="10% off" data-ar="خصم 10%">10% off</div>
-                    </div>
-                  </div>
-                  <div class="card-one-information">
-                    <div class="w-layout-hflex card-one-top">
-                      <div class="w-layout-hflex card-one-rating">
-                        <img width="16" height="17" alt="Icon"
-                          src="https://cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/671b618e1c1b5cffd4b5015d_Rating Star.svg"
-                          loading="lazy" />
-                        <div class="small-text" >5</div>
-                      </div>
-                      <div class="small-text"  ><i class="fa-solid fa-clock "></i> &nbsp;9 Nights - 10 Days</div>
-                    </div>
-                    <div class="small-text margin-bottom-ten"  >Destinations - Kochi to Alleppey </div>
-                    <div class="heading-style-h6 margin-bottom-ten" >10 Days Premium Package</div>
-                    <div class="w-layout-hflex card-price">
-                    
-                      <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
-                        class="card-one-sell-price" >15 + Destinations</div>
-                      
-                    </div>
-                  </div>
-                </a>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+ 
     <div class="footer-two">
       <section class="footer-two-top">
         <div class="w-layout-blockcontainer container w-container">
@@ -923,23 +730,34 @@
           window.location.href = `tel:+${phoneNumber}`;
         });
       }
-  
+
+      // WhatsApp booking button functionality
+      const whatsappBtn = document.getElementById('whatsapp-booking-btn');
+      if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const quantityInput = document.getElementById('quantity');
+          const persons = quantityInput ? quantityInput.value : 2;
+          const packageName = '10-Day Kerala Tour';
+          const price = 'SAR 4,700';
+          const message = `I am interested in booking the ${packageName} (${price}).\nNumber of persons: ${persons}`;
+          const whatsappUrl = `https://wa.me/918590061859?text=${encodeURIComponent(message)}`;
+          window.open(whatsappUrl, '_blank');
+        });
+      }
+
       // Enquiry form - WhatsApp functionality
       const enquiryForm = document.getElementById('enquiry-form');
       if (enquiryForm) {
         enquiryForm.addEventListener('submit', function(e) {
           e.preventDefault();
-          
           const name = document.getElementById('name').value;
           const email = document.getElementById('email').value;
           const phone = document.getElementById('phone').value;
           const message = document.getElementById('message').value;
-          
           const whatsappMessage = `New Kerala Luxury Package Enquiry:%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
           const whatsappUrl = `https://wa.me/919876543210?text=${whatsappMessage}`;
-          
           window.open(whatsappUrl, '_blank');
-          
           // Show success message
           document.querySelector('.success-message').style.display = 'block';
           document.querySelector('.error-message').style.display = 'none';
