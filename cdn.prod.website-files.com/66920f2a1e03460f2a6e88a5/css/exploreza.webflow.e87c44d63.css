@@ -6627,10 +6627,17 @@ button:hover {
               background: #fff !important;
             }
 
+ .hidden-item {
+  visibility: hidden;
+ }
+
 @media (max-width: 767px) {
   .navbar-content {
     color: #000 !important;
   }
+  .hidden-item {
+  visibility: visible; 
+}
 }
 
 .navbar-two.about-page {
