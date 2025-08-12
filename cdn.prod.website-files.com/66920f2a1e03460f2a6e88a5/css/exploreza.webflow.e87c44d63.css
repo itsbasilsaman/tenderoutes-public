@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Qahiri&display=swap');
 
 
@@ -4363,10 +4363,14 @@ blockquote {
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 28px 60px 20px;
+
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 42px #00000040;
+}
+
+.home-padding {
+    padding: 22px 0px;
 }
 
 .marquee-one.marquee-padding-reduce {
@@ -10414,10 +10418,7 @@ transition: 0.3s ease-in-out;
     padding-top: 110px;
   }
 
-  .marquee-one {
-    padding-left: 140px;
-    padding-right: 140px;
-  }
+  
 
   .marquee-one.marquee-padding-reduce {
     padding-left: 40px;
