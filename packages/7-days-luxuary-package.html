@@ -288,19 +288,82 @@
                     </div>
                     
 <div class="w-layout-hflex price-details flex flex-col md:flex-row">
-  <div class="w-layout-vflex price-column bg-green-50 rounded-xl shadow-lg p-6 md:m-2 m-0 w-full md:flex-1 border border-green-200 md:px-6 px-0 pl-4 md:pl-6">
+    <div class="w-layout-vflex price-column bg-green-50 rounded-xl shadow-lg p-6 md:m-2 m-0 w-full md:flex-1 border border-green-200 md:px-6 px-0 pl-4 md:pl-6">
     <div class="heading-style-h4 text-green-700 font-bold mb-3 text-lg flex items-center gap-2" data-en="Price includes" data-ar="السعر يشمل">
       <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
       <span data-en="Price includes" data-ar="السعر يشمل">Price includes</span>
     </div>
     <div class="w-richtext">
-      <ul role="list" class="space-y-2">
-        <li class="flex items-center gap-2 text-gray-700"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Daily breakfast" data-ar="إفطار يومي">Daily breakfast</span></li>
-         <li class="flex items-center gap-2 text-gray-700"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="All meals on houseboat" data-ar="جميع الوجبات في بيت القوارب">All meals on houseboat</span></li>
-        <li class="flex items-center gap-2 text-gray-700"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Sightseeing & intercity transfers" data-ar="الجولات السياحية والتنقلات بين المدن">Sightseeing & intercity transfers</span></li>
-        <li class="flex items-center gap-2 text-gray-700"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="All hotel and transport taxes" data-ar="جميع ضرائب الفنادق والمواصلات">All hotel and transport taxes</span></li>
+      <ul role="list" class="space-y-2" id="inclusions-list">
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Kenzul Hind Attar Combo (Free) – A natural perfume set as a special souvenir" data-ar="مجموعة عطور كنز الهند (مجانا) – مجموعة عطور طبيعية كتذكار خاص">Kenzul Hind Attar Combo (Free) – A natural perfume set as a special souvenir</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Traditional Kerala Sweet Box (Free) – Kerala halwa or banana chips as a welcome treat (Premium version)" data-ar="صندوق حلويات كيرالا التقليدي (مجانا) – حلاوة كيرالا أو رقائق الموز كترحيب (نسخة بريميوم)">Traditional Kerala Sweet Box (Free) – Kerala halwa or banana chips as a welcome treat (Premium version)</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Mini Ayurvedic Soap Pack – Herbal or sandalwood soaps from Kerala’s Ayurvedic heritage (Premium version)" data-ar="مجموعة صابون أيورفيدا صغيرة – صابون عشبي أو صندل من تراث كيرالا (نسخة بريميوم)">Mini Ayurvedic Soap Pack – Herbal or sandalwood soaps from Kerala’s Ayurvedic heritage (Premium version)</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Kerala Souvenir Keychain or Fridge Magnet (Premium version)" data-ar="ميدالية أو مغناطيس ثلاجة تذكاري من كيرالا (نسخة بريميوم)">Kerala Souvenir Keychain or Fridge Magnet (Premium version)</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Free Henna Hand Art Session (5-10 min) for female travelers" data-ar="جلسة نقش الحناء المجانية (5-10 دقائق) للنساء المسافرات">Free Henna Hand Art Session (5-10 min) for female travelers</span></li>
+        <!-- Remaining items, initially hidden -->
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Mini Ayurveda Experience Voucher" data-ar="قسيمة تجربة أيورفيدا صغيرة">Mini Ayurveda Experience Voucher</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Free Local Evening Cultural Show Entry (Kathakali dance or Kalaripayattu, if available)" data-ar="دخول مجاني لعرض ثقافي محلي مسائي (رقصة كاثاكالي أو كالرِباياتو، إذا كان متاحًا)">Free Local Evening Cultural Show Entry (Kathakali dance or Kalaripayattu, if available)</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Priority Check-in Assistance at hotel (handled by driver/guide)" data-ar="مساعدة تسجيل الوصول الفوري في الفندق (يتم التعامل معها بواسطة السائق/الدليل)">Priority Check-in Assistance at hotel (handled by driver/guide)</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Daily breakfast at hotels" data-ar="إفطار يومي في الفنادق">Daily breakfast at hotels</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="All meals on the houseboat (traditional Kerala cuisine experience)" data-ar="جميع الوجبات في بيت القوارب (تجربة المطبخ الكيرالي التقليدي)">All meals on the houseboat (traditional Kerala cuisine experience)</span></li>
+        <!-- ...repeat for all remaining inclusions, set style="display:none"... -->
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Sightseeing & intercity transfers in a private air-conditioned vehicle" data-ar="جولات مشاهدة المعالم والتنقل بين المدن في سيارة خاصة مكيفة">Sightseeing & intercity transfers in a private air-conditioned vehicle</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Dedicated English/Arabic-speaking driver-guide throughout the trip" data-ar="سائق/دليل يتحدث الإنجليزية أو العربية طوال الرحلة">Dedicated English/Arabic-speaking driver-guide throughout the trip</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Airport pick-up & drop-off" data-ar="استقبال وتوديع في المطار">Airport pick-up & drop-off</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Complimentary mineral water bottles during transfers" data-ar="زجاجات مياه معدنية مجانية أثناء التنقلات">Complimentary mineral water bottles during transfers</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Welcome drink and refreshing towels on arrival at the hotel" data-ar="مشروب ترحيبي ومنشفة منعشة عند الوصول إلى الفندق">Welcome drink and refreshing towels on arrival at the hotel</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Free Wi-Fi in hotels and during transfers" data-ar="واي فاي مجاني في الفنادق وأثناء التنقلات">Free Wi-Fi in hotels and during transfers</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="24/7 customer support hotline during your journey" data-ar="خط دعم العملاء على مدار الساعة طوال الرحلة">24/7 customer support hotline during your journey</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="All hotel and transport taxes" data-ar="جميع ضرائب الفنادق والمواصلات">All hotel and transport taxes</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Kenzul Hind Spices Combo (Free) – Authentic Kerala spices beautifully packed" data-ar="مجموعة توابل كنز الهند (مجانا) – توابل كيرالا الأصلية معبأة بشكل جميل">Kenzul Hind Spices Combo (Free) – Authentic Kerala spices beautifully packed</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Traditional Kerala Sweet Box (Free) – Kerala halwa or banana chips as a welcome treat" data-ar="صندوق حلويات كيرالا التقليدي (مجانا) – حلاوة كيرالا أو رقائق الموز كترحيب">Traditional Kerala Sweet Box (Free) – Kerala halwa or banana chips as a welcome treat</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Free Kerala Tea Sampler – Fresh Nilgiri or Munnar tea leaves to take home" data-ar="مجموعة شاي كيرالا المجانية – أوراق شاي نيلغيري أو مونار الطازجة لأخذها إلى المنزل">Free Kerala Tea Sampler – Fresh Nilgiri or Munnar tea leaves to take home</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Mini Ayurvedic Soap Pack – Herbal or sandalwood soaps from Kerala’s Ayurvedic heritage" data-ar="مجموعة صابون أيورفيدا صغيرة – صابون عشبي أو صندل من تراث كيرالا">Mini Ayurvedic Soap Pack – Herbal or sandalwood soaps from Kerala’s Ayurvedic heritage</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Kerala Souvenir Keychain or Fridge Magnet" data-ar="ميدالية أو مغناطيس ثلاجة تذكاري من كيرالا">Kerala Souvenir Keychain or Fridge Magnet</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Complimentary Coconut Water Refreshment during one sightseeing day" data-ar="مشروب ماء جوز الهند المجاني أثناء أحد أيام الجولات السياحية">Complimentary Coconut Water Refreshment during one sightseeing day</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Traditional Kerala Welcome Garland (flower mala experience)" data-ar="إكليل ترحيبي تقليدي من كيرالا (تجربة زهرة مالا)">Traditional Kerala Welcome Garland (flower mala experience)</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Complimentary Banana Leaf Lunch Experience on one day" data-ar="تجربة غداء على ورقة الموز مجانًا في أحد الأيام">Complimentary Banana Leaf Lunch Experience on one day</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Small Handmade Coir Product (coaster or small mat) as a Kerala souvenir" data-ar="منتج صغير مصنوع يدويًا من الليف (كوستر أو سجادة صغيرة) كتذكار من كيرالا">Small Handmade Coir Product (coaster or small mat) as a Kerala souvenir</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Postcard Pack of Kerala Scenery to send to family and friends" data-ar="مجموعة بطاقات بريدية لمناظر كيرالا لإرسالها للعائلة والأصدقاء">Postcard Pack of Kerala Scenery to send to family and friends</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Kerala Spices Recipe DIGITAL Card – Learn how to use the gifted spices" data-ar="بطاقة وصفة توابل كيرالا الرقمية – تعلم كيفية استخدام التوابل المقدمة">Kerala Spices Recipe DIGITAL Card – Learn how to use the gifted spices</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Discount Coupon for Local Kerala Shopping Outlets" data-ar="قسيمة خصم لمتاجر التسوق المحلية في كيرالا">Discount Coupon for Local Kerala Shopping Outlets</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Digital Travel Memories Pack – 5–10 group trip photos shared via WhatsApp" data-ar="مجموعة ذكريات السفر الرقمية – 5-10 صور جماعية للرحلة يتم مشاركتها عبر واتساب">Digital Travel Memories Pack – 5–10 group trip photos shared via WhatsApp</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Short Guided Walk Through Local Spice Garden (free farm entry visit)" data-ar="جولة إرشادية قصيرة في حديقة التوابل المحلية (زيارة مزرعة مجانية)">Short Guided Walk Through Local Spice Garden (free farm entry visit)</span></li>
+        <li class="flex items-center gap-2 text-gray-700 inclusions-item" style="display:none"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span><span data-en="Small Pack of Kerala Cashew Nuts as a snack gift" data-ar="عبوة صغيرة من الكاجو الكيرالي كهدية خفيفة">Small Pack of Kerala Cashew Nuts as a snack gift</span></li>
       </ul>
+      <button id="view-more-inclusions" style="color: #1d4ed8; background: none; border: none; cursor: pointer; margin-top: 8px; font-weight: bold;">View More</button>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const viewMoreBtn = document.getElementById('view-more-inclusions');
+        let expanded = false;
+        viewMoreBtn.addEventListener('click', function() {
+          expanded = !expanded;
+          document.querySelectorAll('.inclusions-item').forEach(function(item, idx) {
+            if (expanded) {
+              item.style.display = '';
+            } else {
+              item.style.display = idx < 5 ? '' : 'none';
+            }
+          });
+          viewMoreBtn.textContent = expanded ? (localStorage.getItem('language') === 'ar' ? 'عرض أقل' : 'Show Less') : (localStorage.getItem('language') === 'ar' ? 'عرض المزيد' : 'View More');
+        });
+        // Initial state: show only first 5
+        document.querySelectorAll('.inclusions-item').forEach(function(item, idx) {
+          item.style.display = idx < 5 ? '' : 'none';
+        });
+        // Update button text on language switch
+        document.getElementById('language-toggle')?.addEventListener('change', function() {
+          viewMoreBtn.textContent = expanded ? (localStorage.getItem('language') === 'ar' ? 'عرض أقل' : 'Show Less') : (localStorage.getItem('language') === 'ar' ? 'عرض المزيد' : 'View More');
+        });
+        window.addEventListener('storage', function(e) {
+          if (e.key === 'language') {
+            viewMoreBtn.textContent = expanded ? (localStorage.getItem('language') === 'ar' ? 'عرض أقل' : 'Show Less') : (localStorage.getItem('language') === 'ar' ? 'عرض المزيد' : 'View More');
+          }
+        });
+      });
+    <!-- ...existing code... -->
+    </script>
   </div>
   <div class="w-layout-vflex price-column bg-red-50 rounded-xl shadow-lg p-6 md:m-2 m-0 w-full md:flex-1 border border-red-200 md:px-6 px-0 pl-4 md:pl-6">
     <div class="heading-style-h4 text-red-700 font-bold mb-3 text-lg flex items-center gap-2" data-en="Price excludes" data-ar="السعر لا يشمل">

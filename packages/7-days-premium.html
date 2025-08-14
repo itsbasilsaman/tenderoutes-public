@@ -301,21 +301,57 @@
       <span data-en="Price includes" data-ar="السعر يشمل">Price includes</span>
     </div>
     <div class="w-richtext">
-      <ul role="list" class="space-y-2">
-        
-        <li class="flex items-center gap-2 text-gray-700" data-en="Daily breakfast" data-ar="إفطار يومي">
-          Daily breakfast 
-        </li>
-         <li class="flex items-center gap-2 text-gray-700" data-en="All meals on houseboat" data-ar="جميع الوجبات على القارب العائم">
-           All meals on houseboat
-        </li>
-        <li class="flex items-center gap-2 text-gray-700" data-en="Sightseeing & intercity transfers" data-ar="جولات سياحية والتنقل بين المدن">
-          Sightseeing & intercity transfers
-        </li>
-        <li class="flex items-center gap-2 text-gray-700" data-en="All hotel and transport taxes" data-ar="جميع ضرائب الفنادق والمواصلات">
-          All hotel and transport taxes
-        </li>
+      <!-- BEGIN: Custom Inclusions List with Language Switch -->
+      <ul role="list" class="space-y-2" id="inclusions-list">
+        <li data-en="Kenzul Hind Attar Combo (Free) – A natural perfume set as a special souvenir" data-ar="مجموعة عطور كنز الهند (مجانا) – مجموعة عطور طبيعية كتذكار خاص"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> Kenzul Hind Attar Combo (Free) – A natural perfume set as a special souvenir</li>
+        <li data-en="Traditional Kerala Sweet Box (Free) – Kerala halwa or banana chips as a welcome treat (Premium version)" data-ar="صندوق حلويات كيرالا التقليدي (مجانا) – حلوى كيرالا أو رقائق الموز كترحيب (نسخة بريميوم)"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> Traditional Kerala Sweet Box (Free) – Kerala halwa or banana chips as a welcome treat (Premium version)</li>
+        <li data-en="Mini Ayurvedic Soap Pack – Herbal or sandalwood soaps from Kerala’s Ayurvedic heritage (Premium version)" data-ar="مجموعة صابون أيورفيدا الصغيرة – صابون عشبي أو خشب الصندل من تراث كيرالا (نسخة بريميوم)"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> Mini Ayurvedic Soap Pack – Herbal or sandalwood soaps from Kerala’s Ayurvedic heritage (Premium version)</li>
+        <li data-en="Kerala Souvenir Keychain or Fridge Magnet (Premium version)" data-ar="سلسلة مفاتيح أو مغناطيس ثلاجة تذكاري من كيرالا (نسخة بريميوم)"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> Kerala Souvenir Keychain or Fridge Magnet (Premium version)</li>
+        <li data-en="Free Henna Hand Art Session (5-10 min) for female travelers" data-ar="جلسة فن الحناء المجانية (5-10 دقائق) للمسافرات"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> Free Henna Hand Art Session (5-10 min) for female travelers</li>
+        <li class="hidden" data-en="Mini Ayurveda Experience Voucher" data-ar="قسيمة تجربة أيورفيدا الصغيرة"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> Mini Ayurveda Experience Voucher</li>
+        <li class="hidden" data-en="Free Local Evening Cultural Show Entry (Kathakali dance or Kalaripayattu, if available)" data-ar="دخول مجاني لعرض ثقافي محلي مسائي (رقصة كاثاكالي أو كالاريباياتو، إذا كان متاحًا)"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> Free Local Evening Cultural Show Entry (Kathakali dance or Kalaripayattu, if available)</li>
+        <li class="hidden" data-en="Priority Check-in Assistance at hotel (handled by driver/guide)" data-ar="مساعدة تسجيل الوصول الفوري في الفندق (يتم التعامل معها بواسطة السائق/الدليل)"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> Priority Check-in Assistance at hotel (handled by driver/guide)</li>
+        <li class="hidden" data-en="Daily breakfast at hotels" data-ar="إفطار يومي في الفنادق"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> Daily breakfast at hotels</li>
+        <li class="hidden" data-en="All meals on the houseboat (traditional Kerala cuisine experience)" data-ar="جميع الوجبات على القارب (تجربة المأكولات التقليدية في كيرالا)"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> All meals on the houseboat (traditional Kerala cuisine experience)</li>
+        <li class="hidden" data-en="Sightseeing & intercity transfers in a private air-conditioned vehicle" data-ar="جولات سياحية وتنقلات بين المدن في سيارة خاصة مكيفة"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> Sightseeing & intercity transfers in a private air-conditioned vehicle</li>
+        <li class="hidden" data-en="Dedicated English/Arabic-speaking driver-guide throughout the trip" data-ar="سائق/دليل يتحدث الإنجليزية/العربية طوال الرحلة"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> Dedicated English/Arabic-speaking driver-guide throughout the trip</li>
+        <li class="hidden" data-en="Airport pick-up & drop-off" data-ar="استقبال وتوصيل من وإلى المطار"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> Airport pick-up & drop-off</li>
+        <li class="hidden" data-en="Complimentary mineral water bottles during transfers" data-ar="زجاجات مياه معدنية مجانية أثناء التنقلات"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> Complimentary mineral water bottles during transfers</li>
+        <li class="hidden" data-en="Welcome drink and refreshing towels on arrival at the hotel" data-ar="مشروب ترحيبي ومناشف منعشة عند الوصول إلى الفندق"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> Welcome drink and refreshing towels on arrival at the hotel</li>
+        <li class="hidden" data-en="Free Wi-Fi in hotels and during transfers" data-ar="واي فاي مجاني في الفنادق وأثناء التنقلات"><span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span> Free Wi-Fi in hotels and during transfers</li>
       </ul>
+      <button id="view-more-inclusions" class="mt-2 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">View More</button>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var inclusions = document.querySelectorAll('#inclusions-list li');
+        inclusions.forEach(function(item, idx) {
+          if(idx > 4) item.classList.add('hidden');
+        });
+        document.getElementById('view-more-inclusions').addEventListener('click', function() {
+          inclusions.forEach(function(item) { item.classList.remove('hidden'); });
+          this.style.display = 'none';
+        });
+        // Language switch logic
+        function setInclusionLanguage(lang) {
+          inclusions.forEach(function(item) {
+            var text = item.getAttribute('data-' + lang);
+            if(text) {
+              // Find the text node after the dot
+              var nodes = Array.from(item.childNodes);
+              var textNode = nodes.find(n => n.nodeType === Node.TEXT_NODE && n.textContent.trim().length > 0);
+              if(textNode) textNode.textContent = ' ' + text;
+            }
+          });
+        }
+        var toggle = document.getElementById('language-toggle');
+        function updateLang() {
+          setInclusionLanguage(toggle.checked ? 'ar' : 'en');
+        }
+        toggle.addEventListener('change', updateLang);
+        updateLang();
+      });
+      </script>
+      <!-- END: Custom Inclusions List with Language Switch -->
     </div>
   </div>
   <div class="w-layout-vflex price-column bg-red-50 rounded-xl shadow-lg p-6 md:m-2 m-0 w-full md:flex-1 border border-red-200 md:px-6 px-0 pl-4 md:pl-6">
@@ -327,16 +363,16 @@
       <ul role="list" class="space-y-2">
          
         <li class="flex items-center gap-2 text-gray-700" data-en="Airfare" data-ar="تذاكر الطيران">
-          Airfare
+          <span class="inline-block w-2 h-2 bg-red-400 rounded-full"></span> Airfare
         </li>
         <li class="flex items-center gap-2 text-gray-700" data-en="Lunch & dinner (except on houseboat)" data-ar="الغداء والعشاء (باستثناء القارب العائم)">
-          Lunch & dinner (except on houseboat)
+          <span class="inline-block w-2 h-2 bg-red-400 rounded-full"></span> Lunch & dinner (except on houseboat)
         </li>
         <li class="flex items-center gap-2 text-gray-700" data-en="Entry tickets & optional activities" data-ar="تذاكر الدخول والأنشطة الاختيارية">
-          Entry tickets & optional activities
+          <span class="inline-block w-2 h-2 bg-red-400 rounded-full"></span> Entry tickets & optional activities
         </li>
         <li class="flex items-center gap-2 text-gray-700" data-en="Personal expenses (spa, tips, etc.)" data-ar="النفقات الشخصية (سبا، إكراميات، إلخ)">
-          Personal expenses (spa, tips, etc.)
+          <span class="inline-block w-2 h-2 bg-red-400 rounded-full"></span> Personal expenses (spa, tips, etc.)
         </li>
       </ul>
     </div>
