@@ -17,7 +17,7 @@
   <meta charset="utf-8" />
   <title>Best Travel Agency in Kerala | International Travel Agency</title>
   <link rel="icon" href="./Assets/favicon.png" type="image/png"  />
-  
+ 
   <meta
     content="Tenderouts, the best travel agency in Kerala, specialises in international trips with seamless bookings, personalized service, and unbeatable experiences."
     name="description" />
@@ -33,6 +33,7 @@
   <meta content="summary_large_image" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <meta content="Webflow" name="generator" />
+  
   <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
 
@@ -134,6 +135,139 @@
         opacity: 0;
       }
     }
+
+    .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .cards-container {
+        flex-direction: row;
+    }
+}
+
+.card-custom {
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    position: relative;
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 256px;
+    overflow: hidden;
+}
+
+.card-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.rating-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.star-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.rating-text {
+    font-size: 12px;
+    font-weight: bold;
+    color: #4b5563;
+}
+
+.card-content {
+    padding: 32px 20px 24px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.card-description {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.card-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.location {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.price {
+    color: #000;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.itinerary-btn {
+    margin-top: 24px;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 9999px;
+    background: #05C170;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    border: 2px solid #05C170;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.09);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: block;
+    text-decoration: none;
+}
+.itinerary-btn:hover {
+    background: #fff;
+    color: #0f5f3c;
+    transform: scale(1.05);
+    border: 2px solid #0f5f3c;
+}
+
   </style>
   <link href="https://fonts.googleapis.com/" rel="preconnect" />
   <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="anonymous" />
@@ -394,89 +528,103 @@
             <div class="tab-menu w-tab-menu"><a data-w-tab="Tab 1"
                 class="tab-link w-inline-block w-tab-link w--current">
                 <div style="display: flex; justify-content: center;
-                align-items: center; "><img src="./Assets/star.svg" style="width: 25px; object-fit: contain; margin-right: 4px;" alt="Top travel agency in Kerala"> &nbsp;Standard </div>
+                align-items: center; "><img src="./Assets/star.svg" style="width: 25px; object-fit: contain; margin-right: 4px;" alt="Top travel agency in Kerala"> &nbsp;7 Days </div>
               </a><a data-w-tab="Tab 2" class="tab-link w-inline-block w-tab-link">
                 <div style="display: flex; justify-content: center;
-                align-items: center; "><img src="./Assets/diamond.svg" style="width: 25px; object-fit: contain; margin-right: 4px;"  alt="Leading travel agency in Kerala">Premium</div>
+                align-items: center; "><img src="./Assets/diamond.svg" style="width: 25px; object-fit: contain; margin-right: 4px;"  alt="Leading travel agency in Kerala">10 Days</div>
               </a><a data-w-tab="Tab 3" class="tab-link w-inline-block w-tab-link">
-                <div><img src="./Assets/crown.svg" style="width: 25px; object-fit: contain; margin-right: 4px;"  alt="Trusted travel agency in Kerala"> Luxury</div>
+                <div class="" style="display: flex; gap: 6px;"><img src="./Assets/crown.svg" style="width: 25px; object-fit: contain; margin-right: 4px;"  alt="Trusted travel agency in Kerala"> <div>12 Days</div></div>
               </a> </div>
             <div class="home-two-trip-content w-tab-content">
-              <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
-                <div class="w-dyn-list">
-                  <div role="list" class="trips-cards-box w-dyn-items">
-                    <!-- Card 1 -->
-                    <div role="listitem" class="w-dyn-item">
-                      <a href="./packages/7-days-standard-package.html" class="hot-deals-card hot-deals-card-two w-inline-block">
-                        <div class="card-one-top-box">
-                          <img class="card-image" src="./Assets/munnar.jpg" width="299.5" height="238" alt="Renowned travel agency in Kerala"
-                            sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 991px) 47vw, (max-width: 1439px) 23vw, 300px"
-                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
-                            loading="lazy" />
-                          <div class="w-layout-vflex offer-box">
-                            <div class="offer-text featured w-dyn-bind-empty"></div>
-                            <div class="offer-text off" data-en="10% off" data-ar="خصم 10%">10% off</div>
-                          </div>
-                        </div>
-                        <div class="card-one-information">
-                          <div class="w-layout-hflex card-one-top">
-                            <div class="w-layout-hflex card-one-rating">
-                              <img width="16" height="17" alt="Best travel agency in Kochi"
-                                src="https://cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/671b618e1c1b5cffd4b5015d_Rating Star.svg"
-                                loading="lazy" />
-                              <div class="small-text" >5</div>
-                            </div>
-                            <div class="small-text"  ><i class="fa-solid fa-clock "></i> &nbsp;8 Nights - 7 Days</div>
-                          </div>
-                          <div class="small-text margin-bottom-ten"  >Destinations - Kochi to Alleppey </div>
-                          <div class="heading-style-h6 margin-bottom-ten" >7 Days Standard Package</div>
-                          <div class="w-layout-hflex card-price">
-                          
-                            <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
-                              class="card-one-sell-price" >15 + Destinations</div>
-                            
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    
-                     <!-- Card 2 -->
-                     <div role="listitem" class="w-dyn-item">
-                      <a href="./packages/10-days-standard-package.html" class="hot-deals-card hot-deals-card-two w-inline-block">
-                        <div class="card-one-top-box">
-                          <img class="card-image" src="./Assets/kochi.jpg" width="299.5" height="238" alt="Top travel agency in Kochi"
-                            sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 991px) 47vw, (max-width: 1439px) 23vw, 300px"
-                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
-                            loading="lazy" />
-                          <div class="w-layout-vflex offer-box">
-                            <div class="offer-text featured w-dyn-bind-empty"></div>
-                            <div class="offer-text off" data-en="10% off" data-ar="خصم 10%">10% off</div>
-                          </div>
-                        </div>
-                        <div class="card-one-information">
-                          <div class="w-layout-hflex card-one-top">
-                            <div class="w-layout-hflex card-one-rating">
-                              <img width="16" height="17" alt="Leading travel agency in Kochi"
-                                src="https://cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/671b618e1c1b5cffd4b5015d_Rating Star.svg"
-                                loading="lazy" />
-                              <div class="small-text" >4.8</div>
-                            </div>
-                            <div class="small-text"  ><i class="fa-solid fa-clock "></i> &nbsp;9 Nights - 10 Days</div>
-                          </div>
-                          <div class="small-text margin-bottom-ten"  >Destinations - Kochi to Alleppey </div>
-                          <div class="heading-style-h6 margin-bottom-ten" >10 Days Standard Package</div>
-                          <div class="w-layout-hflex card-price">
-                          
-                            <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
-                              class="card-one-sell-price" >15 + Destinations</div>
-                            
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  
-                  </div>
-                </div>
+              <div data-w-tab="Tab 1" class="w-tab-pane flex justify-center items-center w--tab-active">
+<div class="cards-container">
+  
+  <!-- CARD 1 -->
+  <div class="card-custom">
+    <div class="card-image">
+      <img src="./Assets/munnar.jpg" alt="Kerala Normal" class="card-image-img" />
+      <div class="rating-badge">
+        <svg class="star-icon" fill="#FFD700" viewBox="0 0 20 20">
+          <path d="M10 15.27L16.18 18l-1.64-7.03L19 7.24l-7.19-.61L10 0 8.19 6.63 1 7.24l5.46 3.73L4.82 18z"/>
+        </svg>
+        <span class="rating-text">4.9</span>
+      </div>
+    </div>
+    <div class="card-content">
+      <h3 class="card-title" data-en="7 Days Normal Package" data-ar="باقة عادية لمدة 7 أيام">
+        7 Days Normal Package
+      </h3>
+      <p class="card-description" data-en="Experience Kerala’s beauty with comfortable stays and well-managed tours at an unbeatable price." data-ar="استمتع بجمال كيرالا مع إقامة مريحة وجولات منظمة بسعر لا يقارن.">
+        Experience Kerala’s beauty with comfortable stays and well-managed tours at an unbeatable price.
+      </p>
+      <div class="card-details">
+        <span class="location">Kerala</span>
+        <span class="price">﷼ 3,500</span>
+      </div>
+      <a href="/packages/7-days-standard-package.html" class="itinerary-btn" data-en="Click for full itinerary" data-ar="انقر لعرض خط سير الرحلة الكامل">
+        Click for full itinerary
+      </a>
+    </div>
+  </div>
+  
+  <!-- CARD 2 -->
+  <div class="card-custom">
+    <div class="card-image">
+      <img src="./Assets/kerala-1.jpg" alt="Kerala Premium" class="card-image-img" />
+      <div class="rating-badge">
+        <svg class="star-icon" fill="#FFD700" viewBox="0 0 20 20">
+          <path d="M10 15.27L16.18 18l-1.64-7.03L19 7.24l-7.19-.61L10 0 8.19 6.63 1 7.24l5.46 3.73L4.82 18z"/>
+        </svg>
+        <span class="rating-text">5</span>
+      </div>
+    </div>
+    <div class="card-content">
+      <h3 class="card-title" data-en="7 Days Premium Package" data-ar="باقة بريميوم لمدة 7 أيام">
+        7 Days Premium Package
+      </h3>
+      <p class="card-description" data-en="Enjoy Kerala in extra comfort: upgraded hotels, exclusive sightseeing, and a tad more luxury." data-ar="استمتع بكيرالا بمزيد من الراحة: فنادق مطورة، ومشاهدة معالم حصرية، والمزيد من الفخامة.">
+        Enjoy Kerala in extra comfort: upgraded hotels, exclusive sightseeing, and a tad more luxury.
+      </p>
+      <div class="card-details">
+        <span class="location">Kerala</span>
+        <span class="price">﷼ 4,100</span>
+      </div>
+      <a href="./packages/7-days-premium.html" class="itinerary-btn" data-en="Click for full itinerary" data-ar="انقر لعرض خط سير الرحلة الكامل">
+        Click for full itinerary
+      </a>
+    </div>
+  </div>
+  
+  <!-- CARD 3 -->
+  <div class="card-custom">
+    <div class="card-image">
+      <img src="./Assets/aleppey-1.jpg" alt="Kerala Luxury" class="card-image-img" />
+      <div class="rating-badge">
+        <svg class="star-icon" fill="#FFD700" viewBox="0 0 20 20">
+          <path d="M10 15.27L16.18 18l-1.64-7.03L19 7.24l-7.19-.61L10 0 8.19 6.63 1 7.24l5.46 3.73L4.82 18z"/>
+        </svg>
+        <span class="rating-text">5</span>
+      </div>
+    </div>
+    <div class="card-content">
+      <h3 class="card-title" data-en="7 Days Luxury Package" data-ar="باقة فاخرة لمدة 7 أيام">
+        7 Days Luxury Package
+      </h3>
+      <p class="card-description" data-en="Indulge in Kerala’s best: five-star resorts, personalized experiences, and premium amenities." data-ar="استمتع بأفضل ما في كيرالا: منتجعات خمس نجوم، تجارب شخصية، ومرافق فاخرة.">
+        Indulge in Kerala’s best: five-star resorts, personalized experiences, and premium amenities.
+      </p>
+      <div class="card-details">
+        <span class="location">Kerala</span>
+        <span class="price">﷼ 5,500</span>
+      </div>
+      <a href="./packages/7-days-luxuary-package.html" class="itinerary-btn" data-en="Click for full itinerary" data-ar="انقر لعرض خط سير الرحلة الكامل">
+        Click for full itinerary
+      </a>
+    </div>
+  </div>
+  
+</div>
+
               </div>
               <div data-w-tab="Tab 2" class="w-tab-pane">
                 <div class="w-dyn-list">
@@ -1293,276 +1441,7 @@
         </div>
       </div>
     </section>
-    <section class="home-two-best-deals">
-      <div class="w-layout-blockcontainer container w-container">
-        <div class="w-layout-vflex best-deals-wrapper">
-          <h2 
-          data-w-id="37066652-9a03-7cc8-b01e-96456866c912" 
-          class="no-margin-top margin-bottom-thirty"
-          data-en="Best tours for you"
-          data-ar="أفضل الجولات لك"
-        >
-          Best tours for you
-        </h2>
-          <div data-w-id="37066652-9a03-7cc8-b01e-96456866c914" class="best-deals">
-            <div class="best-plan-left">
-              <div 
-  class="heading-style-h5 text-dark" 
-  data-en="Recommended for you" 
-  data-ar="موصى به لك"
->
-  Recommended for you
-</div>
-              <div class="w-dyn-list">
-                <div role="list" class="recommended-list w-dyn-items">
-                  <div role="listitem" class="w-dyn-item">
-                    <a href="#" class="recommended-cards w-inline-block">
-                      <div class="recommended-images">
-                        <img class="border-radius-ten" src="./Assets/munnar-1.jpg" width="90" height="81" alt="Customized travel agencies in Kochi" loading="lazy">
-                      </div>
-                      <div class="w-layout-vflex">
-                        <div class="heading-style-h6" data-en="Munnar" data-ar="مونار">Munnar</div>
-                        <div class="heading-style-h6" data-en="Budget Bliss: Munnar Escape" data-ar="متعة الميزانية: رحلة مونار">Budget Bliss: Munnar Escape</div>
-                        <div class="w-layout-hflex card-price">
-                          <div data-en="From" data-ar="ابتداءً من">From</div>
-                          <div class="card-one-sell-price">₹5,499</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  
-                  <div role="listitem" class="w-dyn-item">
-                    <a href="#" class="recommended-cards w-inline-block">
-                      <div class="recommended-images">
-                        <img class="border-radius-ten" src="./Assets/wayanad-1.jpg" width="90" height="81" alt="Best tour operators in Kerala" loading="lazy">
-                      </div>
-                      <div class="w-layout-vflex">
-                        <div class="heading-style-h6" data-en="Wayanad" data-ar="واياناد">Wayanad</div>
-                        <div class="heading-style-h6" data-en="Trekker's Delight: Wayanad Adventure" data-ar="متعة المتنزهين: مغامرة واياناد">Trekker's Delight: Wayanad Adventure</div>
-                        <div class="w-layout-hflex card-price">
-                          <div data-en="From" data-ar="ابتداءً من">From</div>
-                          <div class="card-one-sell-price">₹6,800</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  
-                  <div role="listitem" class="w-dyn-item">
-                    <a href="#" class="recommended-cards w-inline-block">
-                      <div class="recommended-images">
-                        <img class="border-radius-ten" src="./Assets/varkala-1.png" width="90" height="81" alt="Top tour operators in Kerala" loading="lazy">
-                      </div>
-                      <div class="w-layout-vflex">
-                        <div class="heading-style-h6" data-en="Varkala" data-ar="فاركالا">Varkala</div>
-                        <div class="heading-style-h6" data-en="Cliffside Calm: Varkala Backpacker Chill" data-ar="هدوء الجرف: استرخاء المسافرين في فاركالا">Cliffside Calm: Varkala Backpacker Chill</div>
-                        <div class="w-layout-hflex card-price">
-                          <div data-en="From" data-ar="ابتداءً من">From</div>
-                          <div class="card-one-sell-price">₹5,200
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  
-                  
-                </div>
-              </div>
-            </div>
-            <div class="best-plan-left">
-              <div 
-  class="heading-style-h5 text-dark" 
-  data-en="Only for couples" 
-  data-ar="فقط للأزواج"
->
-  Only for couples
-</div>
-              <div class="w-dyn-list">
-                <div role="list" class="recommended-list w-dyn-items">
-                  <div role="listitem" class="w-dyn-item">
-                    <a href="product/munnar-valley-of-love-romantic-getaway.html" class="recommended-cards w-inline-block">
-                      <div class="recommended-images">
-                        <img class="border-radius-ten" 
-                             src="./Assets/munnar-2.jpg" 
-                             width="90" height="81" alt="Leading tour operators in Kerala" sizes="90px" loading="lazy" />
-                      </div>
-                      <div class="w-layout-vflex">
-                        <div class="heading-style-h6" data-en="Munnar: Valley of Love - Romantic Getaway" 
-                             data-ar="مونار: وادي الحب - هروب رومانسي">Munnar: Valley of Love - Romantic Getaway</div>
-                        <div class="w-layout-hflex card-price">
-                          <div data-en="From" data-ar="ابتداءً من">From</div>
-                          <div class="card-one-sell-price" >₹13,999</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  
-                  <div role="listitem" class="w-dyn-item">
-                    <a href="product/alleppey-moonlit-waters-honeymoon-delight.html" class="recommended-cards w-inline-block">
-                      <div class="recommended-images">
-                        <img class="border-radius-ten" 
-                             src="./Assets/alleppey-4.jpeg" 
-                             width="90" height="81" alt="Trusted tour operators in Kerala" sizes="90px" loading="lazy" />
-                      </div>
-                      <div class="w-layout-vflex">
-                        <div class="heading-style-h6" data-en="Alleppey: Moonlit Waters - Honeymoon Delight" 
-                             data-ar="أليبي: مضاءة بالقمر - متعة شهر العسل">Alleppey: Moonlit Waters - Honeymoon Delight</div>
-                        <div class="w-layout-hflex card-price">
-                          <div data-en="From" data-ar="ابتداءً من">From</div>
-                          <div class="card-one-sell-price" >₹18,500</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  
-                  <div role="listitem" class="w-dyn-item">
-                    <a href="product/varkala-waves-heights-surf-adventure.html" class="recommended-cards w-inline-block">
-                      <div class="recommended-images">
-                        <img class="border-radius-ten" 
-                             src="./Assets/varkala-3.jpg" 
-                             width="90" height="81" alt="Renowned tour operators in Kerala" sizes="90px" loading="lazy" />
-                      </div>
-                      <div class="w-layout-vflex">
-                        <div class="heading-style-h6" data-en="Varkala: Waves & Heights - Surf & Adventure" 
-                             data-ar="فاركالا: الأمواج والمرتفعات - ركوب الأمواج والمغامرة">Varkala: Waves & Heights - Surf & Adventure</div>
-                        <div class="w-layout-hflex card-price">
-                          <div data-en="From" data-ar="ابتداءً من">From</div>
-                          <div class="card-one-sell-price"  >₹14,500</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="best-plan-left">
-              <div 
-              class="heading-style-h5 text-dark" 
-              data-en="Family trip" 
-              data-ar="رحلة عائلية"
-            >
-              Family trip
-            </div>
-              <div class="w-dyn-list">
-                <div role="list" class="recommended-list w-dyn-items">
-                  <div role="listitem" class="w-dyn-item">
-                    <a href="#" class="recommended-cards w-inline-block">
-                      <div class="recommended-images">
-                        <img class="border-radius-ten" src="./Assets/aleppey-1.jpg" width="90" height="81" alt="Best tour operators in Kochi" sizes="90px" loading="lazy" />
-                      </div>
-                      <div class="w-layout-vflex">
-                        <div class="heading-style-h6" data-en="Aleppey" data-ar="أليبي">Aleppey</div>
-                        <div class="heading-style-h6" data-en="Backwater Escape: Basic Houseboat" data-ar="هروب إلى المياه الخلفية: بيت عائم أساسي">Backwater Escape: Basic Houseboat</div>
-                        <div class="w-layout-hflex card-price">
-                          <div data-en="From" data-ar="ابتداءً من">From</div>
-                          <div class="card-one-sell-price" >₹4,800</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  
-                  <div role="listitem" class="w-dyn-item">
-                    <a href="#" class="recommended-cards w-inline-block">
-                      <div class="recommended-images">
-                        <img class="border-radius-ten" src="./Assets/wayanad-3.jpg" width="90" height="81" alt="Top tour operators in Kochi" sizes="90px" loading="lazy" />
-                      </div>
-                      <div class="w-layout-vflex">
-                        <div class="heading-style-h6" data-en="Wayanad" data-ar="واياناد">Wayanad</div>
-                        <div class="heading-style-h6" data-en="Family Roots: Wayanad on a Budget" data-ar="جذور عائلية: واياناد بميزانية محدودة">Family Roots: Wayanad on a Budget</div>
-                        <div class="w-layout-hflex card-price">
-                          <div data-en="From" data-ar="ابتداءً من">From</div>
-                          <div class="card-one-sell-price"  >₹9,000</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  
-                  <div role="listitem" class="w-dyn-item">
-                    <a href="#" class="recommended-cards w-inline-block">
-                      <div class="recommended-images">
-                        <img class="border-radius-ten" src="./Assets/varkala-1.png" width="90" height="81" alt="Leading tour operators in Kochi" sizes="90px" loading="lazy" />
-                      </div>
-                      <div class="w-layout-vflex">
-                        <div class="heading-style-h6" data-en="Varkala" data-ar="فاركالا">Varkala</div>
-                        <div class="heading-style-h6" data-en="Cliffside Calm: Varkala Backpacker Chill" data-ar="هدوء الجرف: استرخاء حاملي الحقائب في فاركالا">Cliffside Calm: Varkala Backpacker Chill</div>
-                        <div class="w-layout-hflex card-price">
-                          <div data-en="From" data-ar="ابتداءً من">From</div>
-                          <div class="card-one-sell-price"  >₹5,200</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div data-w-id="37066652-9a03-7cc8-b01e-96456866c996" class="best-deals-two-wrap">
-            <div class="w-dyn-list">
-              <div role="list" class="w-dyn-items">
-                <div role="listitem" class="w-dyn-item">
-                  <div class="w-layout-vflex popular-card" style="height: 320px;">
-                    <div class="w-layout-vflex popular-cards-main-content">
-                      
-                      <div class="offer-tag" data-en="1 Nights - 2 Days" data-ar="ليلة واحدة - يومان">1 Nights - 2 Days</div>
-                      <div class="big-text popular-card-text" data-en="Aleppey" data-ar="أليبيه">Aleppey</div>
-                      
-                      <div class="heading-style-h5" data-en="Backwater Escape: Basic Houseboat" data-ar="هروب إلى المياه الخلفية: بيت عائم أساسي">Backwater Escape: Basic Houseboat</div>
-                    </div>
-                    <div class="w-layout-hflex popular-cards-bottom">
-                      <div class="w-layout-hflex card-three-price">
-                        <div class="small-text text-strike-through text-light-white">₹ 18,500</div>
-                        <div class="heading-style-h4 text-color-white">₹ 15,500</div>
-                      </div>
-                      
-                      <div class="w-layout-vflex popular-cards-one-button-box">
-             
-                        <a href="#" class="button w-button" data-en="Book Now" data-ar="احجز الآن">Book Now</a>
-                      </div>
-                    </div>
-                    <div class="popular-card-image-wrapper">
-                      <img class="popular-cards-image" src="./Assets/aleppey-1.jpg" width="632" height="390" alt="Trusted tour operators in Kochi" loading="lazy" />
-                      <div class="popular-cards-overlay"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="w-dyn-list">
-              <div role="list" class="w-dyn-items">
-                <div role="listitem" class="w-dyn-item">
-                  <div class="w-layout-vflex popular-card popular-cards-two" style="height: 320px;">
-                    <div class="w-layout-vflex popular-card-two-text-wrapper">
-                      <div class="text-color-white" data-en="10 Nights - 11 Days" data-ar="10 ليالٍ - 11 يومًا">10 Nights - 11 Days</div>
-                      <div class="big-text popular-card-text" data-en="Wayanad" data-ar="وايناد">Wayanad</div>
-                     
-                      <div class="heading-style-h5" data-en="Into the Wild: Wayanad" data-ar="في البرية: وايناد">Into the Wild: Wayanad</div>
-                    </div>
-                    <div class="w-layout-hflex popular-cards-bottom">
-                      <div class="w-layout-hflex card-three-price">
-                        <div class="small-text text-strike-through text-light-white">₹ 18,500</div>
-                        <div class="heading-style-h4 text-color-white">₹ 15,500</div>
-                      </div>
-                      
-                      <div class="w-layout-vflex popular-cards-one-button-box">
-             
-                        <a href="#" class="button w-button" data-en="Book Now" data-ar="احجز الآن">Book Now</a>
-                      </div>
-                    </div>
-                    <div class="popular-card-image-wrapper">
-                      <img class="popular-cards-image"
-                           src="./Assets/wayanad-1.jpg"   
-                           width="632" height="100%" alt="Renowned tour operators in Kochi"
-                          
-                           loading="lazy" />
-                      <div class="popular-cards-overlay"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+   
     <section class="navbar" style="padding-bottom: 30px;">
       <div class="w-layout-blockcontainer container-large w-container">
         <div class="home-two-testimonial-main" dir="ltr">
