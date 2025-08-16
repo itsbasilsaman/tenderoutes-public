@@ -33,16 +33,66 @@
   <link href="../../cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/css/exploreza.webflow.e87c44d63.css"
     rel="stylesheet" type="text/css" />
   <style>
-    @media (min-width:992px) {
-      html.w-mod-js:not(.w-mod-ix) [data-w-id="e708a6b4-4ee6-0ea4-338d-90075cfc50a5"] {
-        -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-        -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-        -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-        transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+    .gradient-animate {
+      background: linear-gradient(90deg, #fff 0%, #e5e7eb 50%, #fff 100%);
+      background-size: 200% 200%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 2.5s linear infinite;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    @media (min-width: 768px) {
+      /* Itinerary day card improvements */
+      .trip-details-about-left .flex.flex-col.md\:flex-row.items-center {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 32px;
+        margin-bottom: 32px;
       }
-
-      html.w-mod-js:not(.w-mod-ix) [data-w-id="e708a6b4-4ee6-0ea4-338d-90075cfc50a3"] {
-        opacity: 0;
+      .trip-details-about-left .flex.flex-col.md\:flex-row.items-center .grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+        min-width: 220px;
+        max-width: 320px;
+        margin-right: 24px;
+      }
+      .trip-details-about-left .flex.flex-col.md\:flex-row.items-center .grid img:first-child {
+        display: block;
+      }
+      .trip-details-about-left .flex.flex-col.md\:flex-row.items-center .grid img:last-child {
+        display: none;
+      }
+      .trip-details-about-left .flex-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      /* Price details columns side by side */
+      .price-details {
+        flex-direction: row !important;
+        gap: 32px;
+        align-items: stretch;
+        margin-top: 32px;
+      }
+      .price-details .price-column {
+        max-width: 480px;
+        min-width: 320px;
+        margin: 0 8px;
+      }
+      /* Container max width for better readability */
+      .trip-details-about .container.w-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      /* Tour plan timeline spacing */
+      .plan-wrapper {
+        max-width: 900px;
+        margin: 0 auto;
       }
     }
   </style>
@@ -146,14 +196,13 @@
     <section class="tour-hero munnar">
       <div class="w-layout-blockcontainer w-container">
         <h1
-        data-w-id="a7266acd-2b6f-f317-92fa-c8f6e150f8e0"
-        class="no-margin text-color-white text-align-center"
-        id="hero-title"
-        style="font-family: 'Kaushan Script', cursive; font-size: 20px;">
-          10 Days Normal Package (SAR 4,700)
-      </h1>
-      
-
+          data-w-id="a7266acd-2b6f-f317-92fa-c8f6e150f8e0"
+          class="no-margin text-center text-[25px] lg:text-[42px] font-bold gradient-animate"
+          id="hero-title"
+          style="font-family: 'Kaushan Script', cursive; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);"
+        >
+          <span data-en="10-DAY NORMAL PACKAGE" data-ar="باقة عادية لمدة 10 أيام">10-DAY NORMAL PACKAGE</span>
+        </h1>
       </div>
     </section>
  
@@ -162,7 +211,7 @@
     
     
     
-    <section class="trip-details-about" style="padding-top: 30px;">
+  <section class="trip-details-about pt-[30px] lg:pt-[48px]">
       <div class="w-layout-blockcontainer container w-container">
         <div class="w-layout-hflex trip-details-about-main">
           <div class="trip-details-about-left">
@@ -656,7 +705,15 @@
                     <div class="w-layout-hflex currency-selector">
                       <div class="heading-style-h5 text-dark" id="current-price" data-en="SAR 4,700" data-ar="٤٬٧٠٠ ريال سعودي">SAR 4,700</div>
                       <div class="original-price" style="display:none;"></div>
-                      <!-- Currency dropdown removed, only SAR shown -->
+                      <div class="currency-dropdown" style="position:relative; margin-left:12px;">
+                        <button id="currency-dropdown-btn" style="background:#f3f4f6; border:1px solid #ccc; border-radius:5px; padding:4px 12px; cursor:pointer; font-size:15px; min-width:70px;">SAR ▼</button>
+                        <div class="currency-dropdown-content" style="display:none; position:absolute; left:0; top:110%; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 2px 8px rgba(0,0,0,0.08); z-index:10; min-width:100px;">
+                          <a href="#" data-currency="SAR" data-price="4700" data-original="5200" style="display:block; padding:6px 12px; color:#222; text-decoration:none;">SAR</a>
+                          <a href="#" data-currency="AED" data-price="4600" data-original="5100" style="display:block; padding:6px 12px; color:#222; text-decoration:none;">AED</a>
+                          <a href="#" data-currency="USD" data-price="1250" data-original="1400" style="display:block; padding:6px 12px; color:#222; text-decoration:none;">USD</a>
+                          <a href="#" data-currency="OMR" data-price="480" data-original="530" style="display:block; padding:6px 12px; color:#222; text-decoration:none;">OMR</a>
+                        </div>
+                      </div>
                     </div>
                    
                   </div>
@@ -836,6 +893,40 @@
       }
     });
 
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // --- Currency Dropdown Functionality ---
+      const dropdownBtn = document.getElementById('currency-dropdown-btn');
+      const dropdownContent = document.querySelector('.currency-dropdown-content');
+      const currentPriceEl = document.getElementById('current-price');
+      const originalPriceEl = document.querySelector('.original-price');
+      if (dropdownBtn && dropdownContent && currentPriceEl && originalPriceEl) {
+        dropdownBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+        dropdownContent.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const currency = this.getAttribute('data-currency');
+            const price = this.getAttribute('data-price');
+            const original = this.getAttribute('data-original');
+            // Always show currency code, never symbol
+            currentPriceEl.textContent = `${currency} ${Number(price).toLocaleString()}`;
+            originalPriceEl.textContent = `${currency} ${Number(original).toLocaleString()}`;
+            dropdownBtn.textContent = `${currency} ▼`;
+            dropdownContent.style.display = 'none';
+          });
+        });
+        // Close dropdown on outside click
+        document.addEventListener('click', function(e) {
+          if (!dropdownContent.contains(e.target) && e.target !== dropdownBtn) {
+            dropdownContent.style.display = 'none';
+          }
+        });
+      }
+    });
   </script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {

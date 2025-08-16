@@ -90,8 +90,8 @@
           class="no-margin text-center text-[25px] lg:text-[42px] font-bold gradient-animate"
           id="hero-title"
           style="font-family: 'Kaushan Script', cursive; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);"
-          data-en=" Luxury Package (SAR 5,500)" data-ar=" باقة فاخرة (٥٥٠٠ ريال سعودي)">
-          Luxury Package (SAR 5,500)
+          data-en="7 DAY LUXUARY PACKAGE  " data-ar=" باقة فاخرة (٥٥٠٠ ريال سعودي)">
+         7 DAY LUXUARY PACKAGE 
         </h1>
       </div>
     </section>
@@ -366,8 +366,51 @@
                   <img src="https://cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/67613fd2b3cc9e5772a048bc_Tag Icon.svg" loading="lazy" alt="Icon" />
                   <div class="w-layout-vflex price-gap">
                     <div class="w-layout-hflex currency-selector">
-                      <div class="heading-style-h5 text-dark" id="current-price">SAR 5,500</div>
+                      <div class="heading-style-h5 text-dark" id="current-price" data-en="SAR 5,500" data-ar="٥٬٥٠٠ ريال سعودي">SAR 5,500</div>
                       <div class="original-price" style="display:none;"></div>
+                      <div class="currency-dropdown" style="position:relative; margin-left:12px;">
+                        <button id="currency-dropdown-btn" style="background:#f3f4f6; border:1px solid #ccc; border-radius:5px; padding:4px 12px; cursor:pointer; font-size:15px; min-width:70px;">SAR ▼</button>
+                        <div class="currency-dropdown-content" style="display:none; position:absolute; left:0; top:110%; background:#fff; border:1px solid #ccc; border-radius:5px; box-shadow:0 2px 8px rgba(0,0,0,0.08); z-index:10; min-width:100px;">
+                          <a href="#" data-currency="SAR" data-price="5500" data-original="6000" style="display:block; padding:6px 12px; color:#222; text-decoration:none;">SAR</a>
+                          <a href="#" data-currency="AED" data-price="5400" data-original="5900" style="display:block; padding:6px 12px; color:#222; text-decoration:none;">AED</a>
+                          <a href="#" data-currency="USD" data-price="1470" data-original="1600" style="display:block; padding:6px 12px; color:#222; text-decoration:none;">USD</a>
+                          <a href="#" data-currency="OMR" data-price="565" data-original="620" style="display:block; padding:6px 12px; color:#222; text-decoration:none;">OMR</a>
+                        </div>
+                      </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // --- Currency Dropdown Functionality ---
+      const dropdownBtn = document.getElementById('currency-dropdown-btn');
+      const dropdownContent = document.querySelector('.currency-dropdown-content');
+      const currentPriceEl = document.getElementById('current-price');
+      const originalPriceEl = document.querySelector('.original-price');
+      if (dropdownBtn && dropdownContent && currentPriceEl && originalPriceEl) {
+        dropdownBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+        dropdownContent.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const currency = this.getAttribute('data-currency');
+            const price = this.getAttribute('data-price');
+            const original = this.getAttribute('data-original');
+            // Always show currency code, never symbol
+            currentPriceEl.textContent = `${currency} ${Number(price).toLocaleString()}`;
+            originalPriceEl.textContent = `${currency} ${Number(original).toLocaleString()}`;
+            dropdownBtn.textContent = `${currency} ▼`;
+            dropdownContent.style.display = 'none';
+          });
+        });
+        // Close dropdown on outside click
+        document.addEventListener('click', function(e) {
+          if (!dropdownContent.contains(e.target) && e.target !== dropdownBtn) {
+            dropdownContent.style.display = 'none';
+          }
+        });
+      }
+    });
+  </script>
                     </div>
                   </div>
                 </div>
