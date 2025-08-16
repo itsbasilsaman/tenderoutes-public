@@ -624,160 +624,268 @@
   </div>
   
 </div>
+<style>
+/* Animation for rating badge */
+.card-custom .rating-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  padding: 6px 14px 6px 10px;
+  gap: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-30px) scale(0.8);
+  transition: opacity 0.35s cubic-bezier(.6,.2,.4,1), transform 0.35s cubic-bezier(.6,.2,.4,1);
+  z-index: 2;
+}
+.card-custom:hover .rating-badge {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+.card-custom {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.card-custom:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  transform: translateY(-6px) scale(1.025);
+}
+.card-custom .card-image-img {
+  transition: transform 0.4s cubic-bezier(.6,.2,.4,1), filter 0.4s;
+}
+.card-custom:hover .card-image-img {
+  transform: scale(1.07) rotate(-1deg);
+  filter: brightness(1.08) saturate(1.1);
+}
+.card-custom .card-title {
+  transition: color 0.3s;
+}
+.card-custom:hover .card-title {
+  color: #0AC174;
+}
+.card-custom .itinerary-btn {
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  background: #f5f5f5;
+  color: #0AC174;
+  border-radius: 8px;
+  padding: 7px 18px;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(30,136,229,0.07);
+}
+.card-custom .itinerary-btn:hover {
+  background: #0AC174;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(30,136,229,0.13);
+}
+.card-custom .card-details .price {
+  font-weight: bold;
+  color: #388e3c;
+  transition: color 0.3s;
+}
+.card-custom:hover .card-details .price {
+  color: #0AC174;
+}
+.card-custom .star-icon {
+  width: 18px;
+  height: 18px;
+  animation: star-pop 0.7s cubic-bezier(.6,.2,.4,1) 1;
+}
+@keyframes star-pop {
+  0% { transform: scale(0.7) rotate(-20deg); opacity: 0; }
+  60% { transform: scale(1.2) rotate(10deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+</style>
 
               </div>
-              <div data-w-tab="Tab 2" class="w-tab-pane">
-                <div class="w-dyn-list">
-                  <div role="list" class="trips-cards-box w-dyn-items">
-                     <!-- Card 1 -->
-                     <div role="listitem" class="w-dyn-item">
-                      <a href="./packages/7-days-premium.html" class="hot-deals-card hot-deals-card-two w-inline-block">
-                        <div class="card-one-top-box">
-                          <img class="card-image" src="./Assets/wayanad-2.jpg" width="299.5" height="238" alt="Trusted travel agency in Kochi"
-                            sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 991px) 47vw, (max-width: 1439px) 23vw, 300px"
-                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
-                            loading="lazy" />
-                          <div class="w-layout-vflex offer-box">
-                            <div class="offer-text featured w-dyn-bind-empty"></div>
-                            <div class="offer-text off" data-en="10% off" data-ar="خصم 10%">10% off</div>
-                          </div>
-                        </div>
-                        <div class="card-one-information">
-                          <div class="w-layout-hflex card-one-top">
-                            <div class="w-layout-hflex card-one-rating">
-                              <img width="16" height="17" alt="Renowned travel agency in Kochi"
-                                src="https://cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/671b618e1c1b5cffd4b5015d_Rating Star.svg"
-                                loading="lazy" />
-                              <div class="small-text" >4.9</div>
-                            </div>
-                            <div class="small-text"  ><i class="fa-solid fa-clock "></i> &nbsp;8 Nights - 7 Days</div>
-                          </div>
-                          <div class="small-text margin-bottom-ten"  >Destinations - Kochi to Alleppey </div>
-                          <div class="heading-style-h6 margin-bottom-ten" >7 Days Premium Package</div>
-                          <div class="w-layout-hflex card-price">
-                          
-                            <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
-                              class="card-one-sell-price" >15 + Destinations</div>
-                            
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    
-                     <!-- Card 2 -->
-                     <div role="listitem" class="w-dyn-item">
-                      <a href="./packages/10-days-premium.html" class="hot-deals-card hot-deals-card-two w-inline-block">
-                        <div class="card-one-top-box">
-                          <img class="card-image" src="./Assets/varkala-3.jpg" width="299.5" height="238" alt="Best international travel agency in Kerala"
-                            sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 991px) 47vw, (max-width: 1439px) 23vw, 300px"
-                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
-                            loading="lazy" />
-                          <div class="w-layout-vflex offer-box">
-                            <div class="offer-text featured w-dyn-bind-empty"></div>
-                            <div class="offer-text off" data-en="10% off" data-ar="خصم 10%">10% off</div>
-                          </div>
-                        </div>
-                        <div class="card-one-information">
-                          <div class="w-layout-hflex card-one-top">
-                            <div class="w-layout-hflex card-one-rating">
-                              <img width="16" height="17" alt="Top international travel agency in Kerala"
-                                src="https://cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/671b618e1c1b5cffd4b5015d_Rating Star.svg"
-                                loading="lazy" />
-                              <div class="small-text" >5</div>
-                            </div>
-                            <div class="small-text"  ><i class="fa-solid fa-clock "></i> &nbsp;9 Nights - 10 Days</div>
-                          </div>
-                          <div class="small-text margin-bottom-ten"  >Destinations - Kochi to Alleppey </div>
-                          <div class="heading-style-h6 margin-bottom-ten" >10 Days Premium Package</div>
-                          <div class="w-layout-hflex card-price">
-                          
-                            <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
-                              class="card-one-sell-price" >15 + Destinations</div>
-                            
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    
-                 
-                  </div>
-                </div>
-              </div>
-              <div data-w-tab="Tab 3" class="w-tab-pane">
-                <div class="w-dyn-list">
-                  <div role="list" class="trips-cards-box w-dyn-items">
-                    <div role="listitem" class="w-dyn-item">
-                      <a href="./packages/7-days-luxuary-package.html" class="hot-deals-card hot-deals-card-two w-inline-block">
-                        <div class="card-one-top-box">
-                          <img class="card-image" src="./Assets/7days-one.jpg" width="299.5" height="238" alt="Leading international travel agency in Kerala"
-                            sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 991px) 47vw, (max-width: 1439px) 23vw, 300px"
-                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
-                            loading="lazy"/>
-                          <div class="w-layout-vflex offer-box">
-                            <div class="offer-text featured" data-en="Featured" data-ar="متميز">Featured</div>
-                            <div class="offer-text off" data-en="12% off" data-ar="خصم 12٪">12% off</div>
-                          </div>
-                        </div>
-                        <div class="card-one-information">
-                          <div class="w-layout-hflex card-one-top">
-                            <div class="w-layout-hflex card-one-rating">
-                              <img width="16" height="17" alt="Trusted international travel agency in Kerala"
-                                src="https://cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/671b618e1c1b5cffd4b5015d_Rating Star.svg"
-                                loading="lazy"/>
-                                <div class="small-text" data-en="4.9 (100)" data-ar="4.9 (100)">4.9 (100)</div>
-                            </div>
-                            <div class="small-text" data-en="5 Nights - 6 Days" data-ar="5 ليالي - 6 أيام">5 Nights - 6 Days</div>
-                          </div>
-                          <div class="small-text margin-bottom-ten"  ><span style="color: black; font-weight: 600;">Destinations</span> - Kochi to Alleppey</div>
-                          <div class="heading-style-h6 margin-bottom-ten"  >
-                            7 Days Luxury Retreat
-                          </div>
-                          <div class="w-layout-hflex card-price">
-                         
-                            <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
-                              class="card-one-sell-price" >20 + Destination </div>
-                           
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    
-                    <div role="listitem" class="w-dyn-item">
-                      <a href="./packages/10-days-luxuary-package.html" class="hot-deals-card hot-deals-card-two w-inline-block">
-                        <div class="card-one-top-box">
-                          <img class="card-image" src="./Assets/wayanad-4.jpg" width="299.5" height="238" alt="Renowned international travel agency in Kerala"
-                            sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, (max-width: 991px) 47vw, (max-width: 1439px) 23vw, 300px"
-                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
-                            loading="lazy" />
-                          <div class="w-layout-vflex offer-box">
-                            <div class="offer-text featured w-dyn-bind-empty"></div>
-                            <div class="offer-text off" data-en="10% off" data-ar="خصم 10%">10% off</div>
-                          </div>
-                        </div>
-                        <div class="card-one-information">
-                          <div class="w-layout-hflex card-one-top">
-                            <div class="w-layout-hflex card-one-rating">
-                              <img width="16" height="17" alt="Best international travel agency in Kochi"
-                                src="https://cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/671b618e1c1b5cffd4b5015d_Rating Star.svg"
-                                loading="lazy" />
-                              <div class="small-text" >5</div>
-                            </div>
-                            <div class="small-text"  ><i class="fa-solid fa-clock "></i> &nbsp;9 Nights - 10 Days</div>
-                          </div>
-                          <div class="small-text margin-bottom-ten"  >Destinations - Kochi to Alleppey </div>
-                          <div class="heading-style-h6 margin-bottom-ten" >10 Days Luxury Package</div>
-                          <div class="w-layout-hflex card-price">
-                          
-                            <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
-                              class="card-one-sell-price" >20 + Destinations</div>
-                            
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div data-w-tab="Tab 2" class="w-tab-pane flex justify-center items-center">
+  <div class="cards-container">
+  
+  <!-- CARD 1 -->
+  <div class="card-custom">
+    <div class="card-image">
+      <img src="./Assets/munnar.jpg" alt="Kerala Normal" class="card-image-img" />
+      <div class="rating-badge">
+        <svg class="star-icon" fill="#FFD700" viewBox="0 0 20 20">
+          <path d="M10 15.27L16.18 18l-1.64-7.03L19 7.24l-7.19-.61L10 0 8.19 6.63 1 7.24l5.46 3.73L4.82 18z"/>
+        </svg>
+        <span class="rating-text">4.9</span>
+      </div>
+    </div>
+    <div class="card-content">
+      <h3 class="card-title" data-en="10 Days Normal Package" data-ar="باقة عادية لمدة 10 أيام">
+        10 Days Normal Package
+      </h3>
+      <p class="card-description" data-en="Experience Kerala’s beauty with comfortable stays and well-managed tours at an unbeatable price." data-ar="استمتع بجمال كيرالا مع إقامة مريحة وجولات منظمة بسعر لا يقارن.">
+        Experience Kerala’s beauty with comfortable stays and well-managed tours at an unbeatable price.
+      </p>
+      <div class="card-details">
+        <span class="location">Kerala</span>
+        <span class="price">﷼ 4,700</span>
+      </div>
+      <a href="/packages/10-days-standard-package.html" class="itinerary-btn" data-en="Click for full itinerary" data-ar="انقر لعرض خط سير الرحلة الكامل">
+        Click for full itinerary
+      </a>
+    </div>
+  </div>
+  
+  <!-- CARD 2 -->
+  <div class="card-custom">
+    <div class="card-image">
+      <img src="./Assets/kerala-1.jpg" alt="Kerala Premium" class="card-image-img" />
+      <div class="rating-badge">
+        <svg class="star-icon" fill="#FFD700" viewBox="0 0 20 20">
+          <path d="M10 15.27L16.18 18l-1.64-7.03L19 7.24l-7.19-.61L10 0 8.19 6.63 1 7.24l5.46 3.73L4.82 18z"/>
+        </svg>
+        <span class="rating-text">5</span>
+      </div>
+    </div>
+    <div class="card-content">
+      <h3 class="card-title" data-en="10 Days Premium Package" data-ar="باقة بريميوم لمدة 10 أيام">
+        10 Days Premium Package
+      </h3>
+      <p class="card-description" data-en="Enjoy Kerala in extra comfort: upgraded hotels, exclusive sightseeing, and a tad more luxury." data-ar="استمتع بكيرالا بمزيد من الراحة: فنادق مطورة، ومشاهدة معالم حصرية، والمزيد من الفخامة.">
+        Enjoy Kerala in extra comfort: upgraded hotels, exclusive sightseeing, and a tad more luxury.
+      </p>
+      <div class="card-details">
+        <span class="location">Kerala</span>
+        <span class="price">﷼ 5,500</span>
+      </div>
+      <a href="./packages/10-days-premium.html" class="itinerary-btn" data-en="Click for full itinerary" data-ar="انقر لعرض خط سير الرحلة الكامل">
+        Click for full itinerary
+      </a>
+    </div>
+  </div>
+  
+  <!-- CARD 3 -->
+  <div class="card-custom">
+    <div class="card-image">
+      <img src="./Assets/aleppey-1.jpg" alt="Kerala Luxury" class="card-image-img" />
+      <div class="rating-badge">
+        <svg class="star-icon" fill="#FFD700" viewBox="0 0 20 20">
+          <path d="M10 15.27L16.18 18l-1.64-7.03L19 7.24l-7.19-.61L10 0 8.19 6.63 1 7.24l5.46 3.73L4.82 18z"/>
+        </svg>
+        <span class="rating-text">4.9</span>
+      </div>
+    </div>
+    <div class="card-content">
+      <h3 class="card-title" data-en="10 Days Luxury Package" data-ar="باقة فاخرة لمدة 10 أيام">
+        10 Days Luxury Package
+      </h3>
+      <p class="card-description" data-en="Indulge in Kerala’s best: five-star resorts, personalized experiences, and premium amenities." data-ar="استمتع بأفضل ما في كيرالا: منتجعات خمس نجوم، تجارب شخصية، ومرافق فاخرة.">
+        Indulge in Kerala’s best: five-star resorts, personalized experiences, and premium amenities.
+      </p>
+      <div class="card-details">
+        <span class="location">Kerala</span>
+        <span class="price">﷼ 8,500</span>
+      </div>
+      <a href="./packages/10-days-luxuary-package.html" class="itinerary-btn" data-en="Click for full itinerary" data-ar="انقر لعرض خط سير الرحلة الكامل">
+        Click for full itinerary
+      </a>
+    </div>
+  </div>
+  
+</div>
+</div>
+
+          <div data-w-tab="Tab 3" class="w-tab-pane flex justify-center items-center">
+  <div class="cards-container">
+  
+  <!-- CARD 1 -->
+  <div class="card-custom">
+    <div class="card-image">
+      <img src="./Assets/munnar.jpg" alt="Kerala Normal" class="card-image-img" />
+      <div class="rating-badge">
+        <svg class="star-icon" fill="#FFD700" viewBox="0 0 20 20">
+          <path d="M10 15.27L16.18 18l-1.64-7.03L19 7.24l-7.19-.61L10 0 8.19 6.63 1 7.24l5.46 3.73L4.82 18z"/>
+        </svg>
+        <span class="rating-text">4.9</span>
+      </div>
+    </div>
+    <div class="card-content">
+      <h3 class="card-title" data-en="12 Days Normal Package" data-ar="باقة عادية لمدة 12 يوم">
+        12 Days Normal Package
+      </h3>
+      <p class="card-description" data-en="Experience Kerala’s beauty with comfortable stays and well-managed tours at an unbeatable price." data-ar="استمتع بجمال كيرالا مع إقامة مريحة وجولات منظمة بسعر لا يقارن.">
+        Experience Kerala’s beauty with comfortable stays and well-managed tours at an unbeatable price.
+      </p>
+      <div class="card-details">
+        <span class="location">Kerala</span>
+        <span class="price">﷼ 6,200</span>
+      </div>
+      <a href="/contact.html" class="itinerary-btn" data-en="Contact" data-ar="اتصل بنا">
+        Contact
+      </a>
+    </div>
+  </div>
+  
+  <!-- CARD 2 -->
+  <div class="card-custom">
+    <div class="card-image">
+      <img src="./Assets/kerala-1.jpg" alt="Kerala Premium" class="card-image-img" />
+      <div class="rating-badge">
+        <svg class="star-icon" fill="#FFD700" viewBox="0 0 20 20">
+          <path d="M10 15.27L16.18 18l-1.64-7.03L19 7.24l-7.19-.61L10 0 8.19 6.63 1 7.24l5.46 3.73L4.82 18z"/>
+        </svg>
+        <span class="rating-text">5</span>
+      </div>
+    </div>
+    <div class="card-content">
+      <h3 class="card-title" data-en="12 Days Premium Package" data-ar="باقة بريميوم لمدة 12 يوم">
+        12 Days Premium Package
+      </h3>
+      <p class="card-description" data-en="Enjoy Kerala in extra comfort: upgraded hotels, exclusive sightseeing, and a tad more luxury." data-ar="استمتع بكيرالا بمزيد من الراحة: فنادق مطورة، ومشاهدة معالم حصرية، والمزيد من الفخامة.">
+        Enjoy Kerala in extra comfort: upgraded hotels, exclusive sightseeing, and a tad more luxury.
+      </p>
+      <div class="card-details">
+        <span class="location">Kerala</span>
+        <span class="price">﷼ 7,500</span>
+      </div>
+       <a href="/contact.html" class="itinerary-btn" data-en="Contact" data-ar="اتصل بنا">
+        Contact
+      </a>
+    </div>
+  </div>
+  
+  <!-- CARD 3 -->
+  <div class="card-custom">
+    <div class="card-image">
+      <img src="./Assets/aleppey-1.jpg" alt="Kerala Luxury" class="card-image-img" />
+      <div class="rating-badge">
+        <svg class="star-icon" fill="#FFD700" viewBox="0 0 20 20">
+          <path d="M10 15.27L16.18 18l-1.64-7.03L19 7.24l-7.19-.61L10 0 8.19 6.63 1 7.24l5.46 3.73L4.82 18z"/>
+        </svg>
+        <span class="rating-text">4.9</span>
+      </div>
+    </div>
+    <div class="card-content">
+      <h3 class="card-title" data-en="12 Days Luxury Package" data-ar="باقة فاخرة لمدة 12 يوم">
+        12 Days Luxury Package
+      </h3>
+      <p class="card-description" data-en="Indulge in Kerala’s best: five-star resorts, personalized experiences, and premium amenities." data-ar="استمتع بأفضل ما في كيرالا: منتجعات خمس نجوم، تجارب شخصية، ومرافق فاخرة.">
+        Indulge in Kerala’s best: five-star resorts, personalized experiences, and premium amenities.
+      </p>
+      <div class="card-details">
+        <span class="location">Kerala</span>
+        <span class="price">﷼ 11,200</span>
+      </div>
+     <a href="/contact.html" class="itinerary-btn" data-en="Contact" data-ar="اتصل بنا">
+        Contact
+      </a>
+    </div>
+  </div>
+  
+</div>
+</div>
+
               <div data-w-tab="Tab 4" class="w-tab-pane">
                 <div class="w-dyn-list">
                   <div role="list" class="trips-cards-box w-dyn-items">
