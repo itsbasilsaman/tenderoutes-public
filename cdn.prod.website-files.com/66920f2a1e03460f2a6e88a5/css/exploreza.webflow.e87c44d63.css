@@ -1204,6 +1204,7 @@ textarea.w-input, textarea.w-select {
 
 .w-slider-dot.w-active {
   background-color: #fff;
+  display: none;
 }
 
 .w-slider-dot:focus {
@@ -5578,14 +5579,14 @@ button:hover {
 }
 
 .home-two-hero-main.background-two {
-  background-image: linear-gradient(#0006, #0006), url("../../../Assets/kerala-bg.jpg");
+  background-image: linear-gradient(#0006, #0006), url("../../../Assets/banner-img-2.jpg");
   background-position: 0 0, 50%;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
 }
 
 .home-two-hero-main.background-three {
-  background-image: linear-gradient(#0006, #0006), url("../../../Assets/bg-2.jpg");
+  background-image: linear-gradient(#0006, #0006), url("../../../Assets/banner-img-1.jpg");
   background-position: 0 0, 50%;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
