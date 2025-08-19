@@ -44,6 +44,16 @@
     rel="stylesheet" type="text/css" />
 
   <style>
+    /* Smooth fade for hero background */
+    .home-two-hero-main {
+      transition: opacity 0.6s cubic-bezier(.6,.2,.4,1);
+    }
+    .home-two-hero-main.fade-out {
+      opacity: 0.8;
+    }
+    .home-two-hero-main.fade-in {
+      opacity: 1;
+    }
     @media (min-width:992px) {
       html.w-mod-js:not(.w-mod-ix) [data-w-id="37066652-9a03-7cc8-b01e-96456866c5b2"] {
         opacity: 0;
