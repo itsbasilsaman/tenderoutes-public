@@ -144,6 +144,12 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transform: translateY(-2px);
     }
+     .search-header h1 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      animation: fadeDown 0.8s ease forwards;
+    }
   </style>
   <link href="https://fonts.googleapis.com/" rel="preconnect" />
   <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="anonymous" />
@@ -306,8 +312,13 @@
      <section class="home-two-trip-tabs">
       <div class="w-layout-blockcontainer container w-container">
         <div class="w-layout-vflex home-two-trip-main">
+
+         <div class="search-header">
+    <h1>✨ Find Your Perfect Journey</h1>
+    <p>Customize your package with <strong>days, travelers, and style</strong> — then hit search to explore tailored experiences.</p>
+  </div>
           
-<div class="w-full rounded-md lg:rounded-full bg-[#0AC174] py-4 px-4 md:px-6 lg:px-8 mb-12">
+<div class="w-full rounded-md lg:rounded-full bg-[#0AC174] py-3 px-3 md:px-6 lg:px-4 mb-12">
     <div class="mx-auto max-w-8xl">
       <div class="flex flex-col md:flex-row items-center justify-center gap-2 bg-white rounded-lg lg:rounded-full shadow-lg p-2">
         
@@ -421,7 +432,7 @@
 
       
      <!-- Replace your existing search button with this -->
-<button class="w-full md:w-auto h-12 px-6 bg-[#0AC174] hover:bg-[#000000] text-white text-base font-semibold rounded-full transition-all duration-300 flex items-center justify-center gap-2" id="search-btn">
+<button class="w-full md:w-auto h-12 px-5 bg-[#0AC174] hover:bg-[#000000] text-white text-base font-semibold rounded-full transition-all duration-300 flex items-center justify-center gap-2" id="search-btn">
   <span id="search-text">Search</span>
   <div id="search-spinner" class="spinner hidden"></div>
 </button>
@@ -478,7 +489,7 @@
         lucide.createIcons();
 
         // API Configuration
-        const API_BASE_URL = 'https://tenderouts-back-end.onrender.com/admin'; // Replace with your actual API URL
+        const API_BASE_URL = 'https://api.tenderoutes.com/admin'; // Replace with your actual API URL
 
         // State variables
         let searchData = {
@@ -604,10 +615,7 @@
 
 function displayResults(apiResponse) {
     results.innerHTML = '';
-
-    // Extract the actual array from your API response
     const data = apiResponse?.data || [];
-
     data.forEach(pkg => {
         const card = document.createElement('div');
         card.setAttribute('role', 'listitem');
@@ -627,8 +635,6 @@ function displayResults(apiResponse) {
             </div>
           </a>
         `;
-
-        // Add click event to save data in localStorage
         card.querySelector(".card-link").addEventListener("click", (e) => {
             e.preventDefault(); // Prevent default navigation
             localStorage.setItem("selectedPackage", JSON.stringify(pkg)); // Save full object
@@ -638,15 +644,6 @@ function displayResults(apiResponse) {
         results.appendChild(card);
     });
 }
-
-
-
-
-
-
-
-
-
         daysSelect.addEventListener('change', (e) => {
             searchData.days = e.target.value;
             animateInput(daysSelect);
@@ -783,15 +780,11 @@ function displayResults(apiResponse) {
                 setLoadingState(false);
             }
         });
-
         // Initialize display
         updateGuestsDisplay();
         updateChildAgeSection();
 
-       
     </script>
-
- 
 
 
   <script src="./languageSwitcher.js"></script>
@@ -801,6 +794,4 @@ function displayResults(apiResponse) {
   <script src="../cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/js/webflow.baaea4ab.5e8e1d8923ee545a.js"
     type="text/javascript"></script>
 </body>
-<!-- Mirrored from exploreza.webflow.io/tour-three by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Apr 2025 08:56:55 GMT -->
-
 </html>
