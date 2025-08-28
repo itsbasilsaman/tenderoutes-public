@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" data-wf-domain="exploreza.webflow.io">
+<head>
+  <meta charset="utf-8">
+  <title>TendRoutes - Kerala Travel Package Provider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./cdn.prod.website-files.com/66920f2a1e03460f2a6e88a5/css/exploreza.webflow.e87c44d63.css"
+    rel="stylesheet" type="text/css" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0AC174',
+            accent: '#10b981',
+            rating: '#FFD700'
+          },
+          fontFamily: {
+            montserrat: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+    }
+    
+    .card-custom {
+      background: linear-gradient(145deg, #ffffff, #f0f9f4);
+      border-radius: 2rem;
+      overflow: hidden;
+      box-shadow: 
+        0 25px 50px -12px rgba(34, 197, 94, 0.25),
+        0 0 0 1px rgba(34, 197, 94, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card-custom::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #10b981, #059669, #10b981);
+      z-index: 10;
+    }
+
+    .card-custom:hover {
+      transform: translateY(-20px) scale(1.02);
+      box-shadow: 
+        0 35px 80px -15px rgba(34, 197, 94, 0.4),
+        0 0 0 1px rgba(34, 197, 94, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-container::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(180deg, transparent, rgba(16, 185, 129, 0.1));
+      pointer-events: none;
+    }
+
+    .rating-badge {
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+
+    .card-custom:hover .rating-badge {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .price-badge {
+      background: linear-gradient(135deg, #10b981 0%, #059669 50%, #10b981 100%);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 13px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      box-shadow: 
+        0 8px 16px -4px rgba(16, 185, 129, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .price-badge::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .price-badge:hover::before {
+      left: 100%;
+    }
+
+    .total-price {
+      background: linear-gradient(135deg, #10b981 0%, #059669 50%, #10b981 100%);
+      color: white;
+      padding: 16px;
+      border-radius: 20px;
+      margin-top: 12px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 
+        0 10px 25px -5px rgba(16, 185, 129, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .total-price::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(180deg); }
+    }
+
+    .content-section {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      position: relative;
+    }
+
+    .glow-effect {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #10b981, transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .card-custom:hover .glow-effect {
+      opacity: 1;
+    }
+
+    .click-indicator {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 2px solid #10b981;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      opacity: 0.7;
+    }
+
+    .card-custom:hover .click-indicator {
+      background: #10b981;
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    .click-indicator svg {
+      width: 18px;
+      height: 18px;
+      fill: #10b981;
+      transition: all 0.3s ease;
+    }
+
+    .card-custom:hover .click-indicator svg {
+      fill: white;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-green-200/60 via-green-100/40 to-green-50 min-h-screen">
+
+  <div class="page-wrapper">
+    <!-- Navbar -->
+    <div data-animation="default" class="navbar-two navbar w-nav navbar-scrolled">
+      <div class="container-large w-container">
+        <div class="w-layout-hflex navbar-two-main">
+          <a href="../index.html" class="brand w-nav-brand">
+            <img src="../Assets/logo.png" loading="lazy" alt="Exploreza" style="width: 140px;">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dynamic Package Cards Section -->
+    <section class="py-12 px-4 flex flex-col items-center pt-[100px]">
+      <h2 class="text-4xl md:text-5xl font-bold mb-10 text-center text-gray-900">
+        Package Details
+      </h2>
+
+      <div id="packageCards" class="flex flex-col md:flex-row gap-8 items-center justify-center w-full max-w-6xl">
+        <!-- Cards will be injected here -->
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const packageData = JSON.parse(localStorage.getItem("selectedPackage"));
+
+      if (!packageData) {
+        document.getElementById("packageCards").innerHTML =
+          "<p class='text-center text-lg text-gray-600'>No package data found.</p>";
+        return;
+      }
+
+      // Build cards for each category (Normal, Premium, Luxury)
+      const categories = ["Normal", "Premium", "Luxury"];
+      
+      const cardsHTML = categories.map(cat => {
+        const calculatedPricing = packageData.calculatedPricing?.[cat];
+        const searchParams = packageData.searchParams;
+        
+        return `
+        <a href="./packages/packageDetailsById.html" 
+           class="card-custom relative w-full max-w-[380px] flex flex-col"
+           data-category="${cat}"
+           data-price="${calculatedPricing?.totalPrice || 0}">
+          <div class="glow-effect"></div>
+          <div class="image-container relative h-72 w-full">
+            <img src="${packageData.images?.[Math.floor(Math.random() * packageData.images.length)]}"
+                 alt="${packageData.destination}" class="w-full h-full object-cover"/>
+            <div class="rating-badge absolute top-4 right-4 flex items-center px-4 py-2 rounded-full shadow-lg">
+              <svg class="w-4 h-4 mr-2" fill="#FFD700" viewBox="0 0 20 20">
+                <path d="M10 15.27L16.18 18l-1.64-7.03L19 7.24l-7.19-.61L10 0 8.19 6.63 1 7.24l5.46 3.73L4.82 18z"/>
+              </svg>
+              <span class="text-sm font-bold text-gray-700">5.0</span>
+            </div>
+          </div>
+          
+          <div class="content-section px-6 pb-6 pt-6 relative -mt-8 z-10 flex flex-col flex-1 rounded-t-3xl">
+            <h3 class="text-xl md:text-2xl font-bold mb-3 text-gray-900 leading-tight">
+              ${packageData.dayNumber} Days ${cat} Package
+            </h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+              ${packageData.priceDetails?.description || "Kerala tour package with amazing experiences."}
+            </p>
+            
+            <!-- Search Parameters Display -->
+            <div class="price-badge mb-3">
+              <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+              </svg>
+              ${searchParams?.adults || 0} Adults + ${searchParams?.children || 0} Children
+            </div>
+            
+            ${calculatedPricing ? `
+            <!-- Total Price Display -->
+            <div class="total-price relative">
+              <div class="relative z-10">
+                <div class="text-2xl font-bold mb-2">
+                  Total: ﷼ ${calculatedPricing.totalPrice.toLocaleString()}
+                </div>
+                <div class="text-sm opacity-90 font-medium">
+                  For ${calculatedPricing.adultCount} Adult${calculatedPricing.adultCount > 1 ? 's' : ''} + ${calculatedPricing.childCount} Child${calculatedPricing.childCount !== 1 ? 'ren' : ''}
+                </div>
+              </div>
+            </div>
+            ` : `
+            <!-- Fallback when no calculated pricing -->
+            <div class="total-price relative">
+              <div class="relative z-10">
+                <div class="text-2xl font-bold mb-2">
+                  From: ﷼ ${packageData.priceDetails?.categories?.[cat]?.adult || '---'}
+                </div>
+                <div class="text-sm opacity-90 font-medium">Per Adult</div>
+              </div>
+            </div>
+            `}
+            
+            <!-- Click indicator -->
+            <div class="click-indicator">
+              <svg viewBox="0 0 24 24">
+                <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6l6 6-6 6-1.41-1.41z"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        `;
+      }).join("");
+
+      document.getElementById("packageCards").innerHTML = cardsHTML;
+
+      // Add click event listeners to cards for tracking selected category
+      document.querySelectorAll('a[data-category]').forEach(card => {
+        card.addEventListener('click', function(e) {
+          const selectedCategory = this.getAttribute('data-category');
+          const selectedPrice = this.getAttribute('data-price');
+          
+          // Store selected category and price for the next page
+          localStorage.setItem('selectedCategory', selectedCategory);
+          localStorage.setItem('selectedPrice', selectedPrice);
+          
+          console.log(`Selected ${selectedCategory} package for ﷼ ${selectedPrice}`);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
