@@ -341,84 +341,53 @@
         </div>
 
      
-        <div class="relative flex-1 min-w-[220px] w-full md:w-auto">
-          <button id="guests-trigger" class="w-full h-12 pl-10 pr-4 text-base font-medium border-2 border-gray-200 rounded-full text-left flex items-center">
-            <i data-lucide="users" class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500"></i>
-            <span id="guests-display" class="transition-all duration-300">0 adults</span>
-            <i data-lucide="chevron-down" class="ml-auto h-4 w-4 shrink-0 opacity-50"></i>
-          </button>
-          
-        
-          <div id="guests-popover" class="hidden absolute z-10 w-80 p-4 space-y-4 bg-white rounded-lg shadow-lg border border-gray-200 mt-1">
-            <div class="flex items-center justify-between">
-              <label for="adults" class="text-base">Adults</label>
-              <div class="flex items-center gap-2">
-                <button id="adults-decrement" class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md">
-                  -
-                </button>
-                <input id="adults" type="number" value="0" readonly class="w-16 text-center border border-gray-300 rounded-md h-8">
-                <button id="adults-increment" class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md">
-                  +
-                </button>
-              </div>
-            </div>
-            <div class="flex items-center justify-between">
-              <label for="children" class="text-base">Children</label>
-              <div class="flex items-center gap-2">
-                <button id="children-decrement" class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md">
-                  -
-                </button>
-                <input id="children" type="number" value="0" readonly class="w-16 text-center border border-gray-300 rounded-md h-8">
-                <button id="children-increment" class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md">
-                  +
-                </button>
-              </div>
-            </div>
-            <div id="children-age-section" class="space-y-2">
-              <select id="child-age" class="w-full border border-gray-300 rounded-md h-10 px-3 hidden">
-                <option value="">Age needed</option>
-                <option value="1">1 years old</option>
-                <option value="2">2 years old</option>
-                <option value="3">3 years old</option>
-                <option value="4">4 years old</option>
-                <option value="5">5 years old</option>
-                <option value="6">6 years old</option>
-                <option value="7">7 years old</option>
-                <option value="8">8 years old</option>
-                <option value="9">9 years old</option>
-                <option value="10">10 years old</option>
-                <option value="11">11 years old</option>
-                <option value="12">12 years old</option>
-                <option value="13">13 years old</option>
-                <option value="14">14 years old</option>
-                <option value="15">15 years old</option>
-                <option value="16">16 years old</option>
-                <option value="17">17 years old</option>
-                <option value="18">18 years old</option>
-              </select>
-              <p class="text-sm text-gray-500 hidden">
-                To find you a place to stay that fits your entire group along with correct prices, we need to know how old your child will be at check-out
-              </p>
-            </div>
-            <div class="flex items-center justify-between">
-              <label for="pets-switch" class="text-base">Travelling with pets?</label>
-              <div class="relative inline-block w-10 mr-2 align-middle select-none">
-                <input type="checkbox" id="pets-switch" class="sr-only">
-                <label for="pets-switch" class="block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer">
-                  <span class="absolute block w-4 h-4 mt-1 ml-1 bg-white rounded-full shadow-md transition-transform duration-200 ease-in-out"></span>
-                </label>
-              </div>
-            </div>
-            <div id="pets-info" class="hidden">
-              <p class="text-sm text-gray-500">
-                Assistance animals aren't considered pets. <a href="#" class="text-blue-600 hover:underline">Read more about travelling with assistance animals</a>
-              </p>
-            </div>
-            <button id="guests-done" class="w-full bg-[#0AC174] hover:bg-[#000000] text-white py-2 px-4 rounded-md transition-all duration-300">
-              Done
-            </button>
-          </div>
+       <!-- Guests selector with improved dropdown -->
+<!-- Guests selector with improved dropdown -->
+<div class="relative flex-1 min-w-[220px] w-full md:w-auto">
+  <button id="guests-trigger" class="w-full h-12 pl-10 pr-4 text-base font-medium border-2 border-gray-200 rounded-full text-left flex items-center transition-all duration-300 hover:border-[#0AC174]">
+    <i data-lucide="users" class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500"></i>
+    <span id="guests-display" class="flex-1">0 adults</span>
+    <i data-lucide="chevron-down" class="ml-auto h-4 w-4 shrink-0 opacity-50 transition-transform duration-300" id="guests-chevron"></i>
+  </button>
+  
+  <!-- Fixed guests popover -->
+  <div id="guests-popover" class="hidden absolute z-50 w-80 p-4 space-y-4 bg-white rounded-lg shadow-lg border border-gray-200 mt-1 left-0 right-0">
+    
+    <!-- Adults Section -->
+    <div class="flex flex-col space-y-1">
+      <div class="flex items-center justify-between">
+        <label class="text-base font-medium">Adults</label>
+        <div class="flex items-center gap-3">
+          <button id="adults-decrement" type="button" class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">-</button>
+          <input id="adults" type="number" value="0" readonly class="w-16 text-center border border-gray-300 rounded-md h-8">
+          <button id="adults-increment" type="button" class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">+</button>
         </div>
+      </div>
+      <p class="text-xs text-gray-500">[For 2 adult 1 room]</p>
+    </div>
+
+    <!-- Children Section -->
+    <div class="flex flex-col space-y-1">
+      <div class="flex items-center justify-between">
+        <label class="text-base font-medium">Children</label>
+        <div class="flex items-center gap-3">
+          <button id="children-decrement" type="button" class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">-</button>
+          <input id="children" type="number" value="0" readonly class="w-16 text-center border border-gray-300 rounded-md h-8">
+          <button id="children-increment" type="button" class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">+</button>
+        </div>
+      </div>
+      <p class="text-xs text-gray-500">(or extra person)</p>
+    </div>
+
+    <!-- Rule Note -->
+    <p class="text-xs text-red-500 font-medium">"2 adult and 1 extra person only allowed in 1 room"</p>
+
+    <button id="guests-done" type="button" class="w-full bg-[#0AC174] hover:bg-green-600 text-white py-2 px-4 rounded-md transition-all duration-300 font-medium">
+      Done
+    </button>
+  </div>
+</div>
+
  
         <div class="relative flex-1 min-w-[180px] w-full md:w-auto">
           <select id="package-select" class="w-full h-12 pl-10 pr-4 text-base font-medium border-2 border-gray-200 rounded-full appearance-none focus:ring-yellow-500 focus:border-yellow-500">
@@ -483,308 +452,340 @@
    
   </div>
 
-   <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+ <script>
+// Initialize Lucide icons
+lucide.createIcons();
 
-        // API Configuration
-        const API_BASE_URL = 'https://api.tenderoutes.com/admin'; // Replace with your actual API URL
+// API Configuration
+const API_BASE_URL = 'https://api.tenderoutes.com/admin';
 
-        // State variables
-        let searchData = {
-            days: "",
-            adults: 0,
-            children: 0,
-            packageType: "normal",
-            travellingWithPets: false,
-            childAge: ""
-        };
+// State variables
+let searchData = {
+    days: "",
+    adults: 0,
+    children: 0,
+    packageType: "normal",
+    travellingWithPets: false,
+    childAge: ""
+};
 
-        // DOM elements
-        const daysSelect = document.getElementById('days-select');
-        const guestsTrigger = document.getElementById('guests-trigger');
-        const guestsPopover = document.getElementById('guests-popover');
-        const guestsDisplay = document.getElementById('guests-display');
-        const adultsInput = document.getElementById('adults');
-        const childrenInput = document.getElementById('children');
-        const adultsIncrement = document.getElementById('adults-increment');
-        const adultsDecrement = document.getElementById('adults-decrement');
-        const childrenIncrement = document.getElementById('children-increment');
-        const childrenDecrement = document.getElementById('children-decrement');
-        const childAgeSelect = document.getElementById('child-age');
-        const childAgeSection = document.getElementById('children-age-section');
-        const petsSwitch = document.getElementById('pets-switch');
-        const petsInfo = document.getElementById('pets-info');
-        const guestsDone = document.getElementById('guests-done');
-        const packageSelect = document.getElementById('package-select');
-        const searchBtn = document.getElementById('search-btn');
-        const searchText = document.getElementById('search-text');
-        const searchSpinner = document.getElementById('search-spinner');
-        const messageContainer = document.getElementById('message-container');
-        const resultsContainer = document.getElementById('results-container');
-        const results = document.getElementById('results');
-        const  travelPackages = [];
+// DOM elements
+const daysSelect = document.getElementById('days-select');
+const guestsTrigger = document.getElementById('guests-trigger');
+const guestsPopover = document.getElementById('guests-popover');
+const guestsDisplay = document.getElementById('guests-display');
+const guestsChevron = document.getElementById('guests-chevron');
+const adultsInput = document.getElementById('adults');
+const childrenInput = document.getElementById('children');
+const adultsIncrement = document.getElementById('adults-increment');
+const adultsDecrement = document.getElementById('adults-decrement');
+const childrenIncrement = document.getElementById('children-increment');
+const childrenDecrement = document.getElementById('children-decrement');
+const guestsDone = document.getElementById('guests-done');
+const packageSelect = document.getElementById('package-select');
+const searchBtn = document.getElementById('search-btn');
+const searchText = document.getElementById('search-text');
+const searchSpinner = document.getElementById('search-spinner');
+const messageContainer = document.getElementById('message-container');
+const results = document.getElementById('results');
+let travelPackages = [];
 
-        // API function
-        async function fetchTravelPackages(params) {
-            try {
-                console.log('Making API request with params:', params);
-                const response = await axios.get(`${API_BASE_URL}/userGetDataByQuery`, { 
-                    params:params
-                });
-                console.log("the response data : of html ",response);
-               
-                return response.data;
-            } catch (error) {
-                console.error('API Error:', error);
-                if (error.response) {
-                    // Server responded with error status
-                    throw new Error(`Server Error: ${error.response.status} - ${error.response.data?.message || 'Unknown error'}`);
-                } else if (error.request) {
-                    // Request was made but no response received
-                    throw new Error('No response from server. Please check if the API is running.');
-                } else {
-                    // Something else happened
-                    throw new Error(`Request Error: ${error.message}`);
-                }
-            }
+// API function
+async function fetchTravelPackages(params) {
+    try {
+        console.log('Making API request with params:', params);
+        const response = await axios.get(`${API_BASE_URL}/userGetDataByQuery`, { 
+            params: params
+        });
+        console.log("API response:", response);
+        return response.data;
+    } catch (error) {
+        console.error('API Error:', error);
+        if (error.response) {
+            throw new Error(`Server Error: ${error.response.status} - ${error.response.data?.message || 'Unknown error'}`);
+        } else if (error.request) {
+            throw new Error('No response from server. Please check if the API is running.');
+        } else {
+            throw new Error(`Request Error: ${error.message}`);
         }
+    }
+}
 
-
-        document.addEventListener("DOMContentLoaded", async () => {
-  try {
-    // Common request without filters
-    const apiResponse = await fetchTravelPackages({});
-    displayResults(apiResponse);
-  } catch (error) {
-    console.error("Error loading initial packages:", error);
-  }
+// Load initial packages
+document.addEventListener("DOMContentLoaded", async () => {
+    try {
+        console.log('Loading initial packages...');
+        const apiResponse = await fetchTravelPackages({});
+        displayResults(apiResponse);
+    } catch (error) {
+        console.error("Error loading initial packages:", error);
+        showMessage('Failed to load packages. Please refresh the page.', 'error');
+    }
 });
 
+// Helper functions
+function animateInput(el) {
+    el.classList.add('ring-2', 'ring-[#0AC174]', 'scale-105');
+    setTimeout(() => {
+        el.classList.remove('ring-2', 'ring-[#0AC174]', 'scale-105');
+    }, 300);
+}
 
-        // Helper functions
-        function animateInput(el) {
-            el.classList.add('ring-2', 'ring-[#0AC174]', 'scale-105');
-            setTimeout(() => {
-                el.classList.remove('ring-2', 'ring-[#0AC174]', 'scale-105');
-            }, 300);
+function setLoadingState(loading) {
+    if (loading) {
+        searchText.textContent = 'Searching...';
+        searchSpinner.classList.remove('hidden');
+        searchBtn.disabled = true;
+        searchBtn.classList.add('opacity-75', 'cursor-not-allowed');
+    } else {
+        searchText.textContent = 'Search';
+        searchSpinner.classList.add('hidden');
+        searchBtn.disabled = false;
+        searchBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+    }
+}
+
+function showMessage(text, type) {
+    messageContainer.innerHTML = `<div class="message ${type}">${text}</div>`;
+    setTimeout(() => { 
+        messageContainer.innerHTML = ''; 
+    }, 5000);
+}
+
+function updateGuestsDisplay() {
+    const total = searchData.adults + searchData.children;
+    let displayText = '';
+    
+    if (total === 0) {
+        displayText = 'Select guests';
+    } else {
+        if (searchData.adults > 0) {
+            displayText = `${searchData.adults} adult${searchData.adults !== 1 ? 's' : ''}`;
         }
-
-        function setLoadingState(loading) {
-            if (loading) {
-                searchText.textContent = 'Searching...';
-                searchSpinner.classList.remove('hidden');
-                searchBtn.disabled = true;
-                searchBtn.classList.add('opacity-75');
-            } else {
-                searchText.textContent = 'Search';
-                searchSpinner.classList.add('hidden');
-                searchBtn.disabled = false;
-                searchBtn.classList.remove('opacity-75');
-            }
+        if (searchData.children > 0) {
+            if (displayText) displayText += ', ';
+            displayText += `${searchData.children} child${searchData.children !== 1 ? 'ren' : ''}`;
         }
+    }
+    
+    guestsDisplay.textContent = displayText;
+}
 
-        function showMessage(text, type) {
-            messageContainer.innerHTML = `<div class="message ${type}">${text}</div>`;
-            setTimeout(() => { 
-                messageContainer.innerHTML = ''; 
-            }, 5000);
-        }
-
-        function updateGuestsDisplay() {
-            let displayText = `${searchData.adults} adult${searchData.adults !== 1 ? 's' : ''}`;
-            if (searchData.children > 0) {
-                displayText += `, ${searchData.children} child${searchData.children !== 1 ? 'ren' : ''}`;
-            }
-            guestsDisplay.textContent = displayText;
-        }
-
-        function updateChildAgeSection() {
-            const childAgeElements = childAgeSection.querySelectorAll('select, p');
-            if (searchData.children > 0) {
-                childAgeElements.forEach(el => el.classList.remove('hidden'));
-            } else {
-                childAgeElements.forEach(el => el.classList.add('hidden'));
-            }
-        }
-
-
-
-
+function toggleGuestsPopover(show) {
+    if (show) {
+        guestsPopover.classList.remove('hidden');
+        if (guestsChevron) guestsChevron.style.transform = 'rotate(180deg)';
+        guestsTrigger.classList.add('border-[#0AC174]');
+    } else {
+        guestsPopover.classList.add('hidden');
+        if (guestsChevron) guestsChevron.style.transform = 'rotate(0deg)';
+        guestsTrigger.classList.remove('border-[#0AC174]');
+    }
+}
 
 function displayResults(apiResponse) {
     results.innerHTML = '';
     const data = apiResponse?.data || [];
+    
+    if (data.length === 0) {
+        results.innerHTML = `
+            <div class="col-span-full text-center py-8">
+                <p class="text-gray-500 text-lg">No packages found. Please try different search options.</p>
+            </div>
+        `;
+        return;
+    }
+
     data.forEach(pkg => {
         const card = document.createElement('div');
         card.setAttribute('role', 'listitem');
+        card.className = 'w-full max-w-sm mx-auto';
 
         card.innerHTML = `
-          <a href="DaysPackageDetails.html" class="block bg-white rounded-xl border border-gray-200 overflow-hidden w-full max-w-xs mx-auto group card-link">
-            <div class="relative">
+          <div class="block bg-white rounded-xl border border-gray-200 overflow-hidden w-full group card-link cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-[#0AC174]">
+            <div class="relative overflow-hidden">
               <img src="${pkg.images?.[0] || './Assets/placeholder.jpg'}" 
                    alt="${pkg.destination}" 
-                   class="w-full lg:h-60 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-              <div class="absolute top-0 left-0 bg-green-500 text-white px-4 py-2 rounded-br-lg text-base font-semibold shadow-md">View Details</div>
-            </div>
-            <div class="p-5 flex flex-col gap-2">
-              <div class="text-center text-xl font-semibold text-gray-900">
-                ${pkg.destination} - ${pkg.dayNumber} Days
+                   class="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105" 
+                   loading="lazy" />
+              <div class="absolute top-0 left-0 bg-[#0AC174] text-white px-4 py-2 rounded-br-lg text-sm font-semibold shadow-md">
+                ${pkg.dayNumber} Days
               </div>
             </div>
-          </a>
+            <div class="p-5">
+              <div class="text-center">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">${pkg.destination}</h3>
+                <div class="text-[#0AC174] font-medium text-sm">View Details →</div>
+              </div>
+            </div>
+          </div>
         `;
-        card.querySelector(".card-link").addEventListener("click", (e) => {
-            e.preventDefault(); // Prevent default navigation
-            localStorage.setItem("selectedPackage", JSON.stringify(pkg)); // Save full object
-            window.location.href = "DaysPackageDetails.html"; // Navigate to next page
+
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            try {
+                localStorage.setItem("selectedPackage", JSON.stringify(pkg));
+            } catch (error) {
+                console.log('Storage not available');
+                window.selectedPackage = pkg;
+            }
+            window.location.href = "DaysPackageDetails.html";
         });
 
         results.appendChild(card);
     });
 }
-        daysSelect.addEventListener('change', (e) => {
-            searchData.days = e.target.value;
-            animateInput(daysSelect);
-        });
 
-        packageSelect.addEventListener('change', (e) => {
-            searchData.packageType = e.target.value;
-            animateInput(packageSelect);
-        });
+// Event listeners
+daysSelect.addEventListener('change', (e) => {
+    searchData.days = e.target.value;
+    animateInput(daysSelect);
+});
 
-        guestsTrigger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            guestsPopover.classList.toggle('hidden');
-            if (!guestsPopover.classList.contains('hidden')) {
-                guestsPopover.classList.add('animate-fadeIn');
-            }
-        });
+packageSelect.addEventListener('change', (e) => {
+    searchData.packageType = e.target.value;
+    animateInput(packageSelect);
+});
 
-        adultsIncrement.addEventListener('click', () => {
-            searchData.adults++;
-            adultsInput.value = searchData.adults;
-            updateGuestsDisplay();
-            animateInput(adultsInput);
-        });
+// Fixed guests selector functionality
+guestsTrigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const isOpen = !guestsPopover.classList.contains('hidden');
+    toggleGuestsPopover(!isOpen);
+});
 
-        adultsDecrement.addEventListener('click', () => {
-            if (searchData.adults > 0) {
-                searchData.adults--;
-                adultsInput.value = searchData.adults;
-                updateGuestsDisplay();
-                animateInput(adultsInput);
-            }
-        });
-
-        childrenIncrement.addEventListener('click', () => {
-            searchData.children++;
-            childrenInput.value = searchData.children;
-            updateGuestsDisplay();
-            updateChildAgeSection();
-            animateInput(childrenInput);
-        });
-
-        childrenDecrement.addEventListener('click', () => {
-            if (searchData.children > 0) {
-                searchData.children--;
-                childrenInput.value = searchData.children;
-                updateGuestsDisplay();
-                updateChildAgeSection();
-                animateInput(childrenInput);
-            }
-        });
-
-        childAgeSelect.addEventListener('change', (e) => {
-            searchData.childAge = e.target.value;
-            animateInput(childAgeSelect);
-        });
-
-        petsSwitch.addEventListener('change', (e) => {
-            searchData.travellingWithPets = e.target.checked;
-            petsInfo.classList.toggle('hidden', !searchData.travellingWithPets);
-            
-            // Toggle switch animation
-            const slider = petsSwitch.nextElementSibling.querySelector('span');
-            if (searchData.travellingWithPets) {
-                slider.style.transform = 'translateX(16px)';
-                petsSwitch.nextElementSibling.style.backgroundColor = '#0AC174';
-            } else {
-                slider.style.transform = 'translateX(0px)';
-                petsSwitch.nextElementSibling.style.backgroundColor = '#d1d5db';
-            }
-            
-            animateInput(petsSwitch.parentElement);
-        });
-
-        guestsDone.addEventListener('click', () => {
-            guestsPopover.classList.add('hidden');
-        });
-
-        // Close popover when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!guestsPopover.contains(e.target) && !guestsTrigger.contains(e.target)) {
-                guestsPopover.classList.add('hidden');
-            }
-        });
-
-        // Main search functionality
-        searchBtn.addEventListener('click', async () => {
-            // Validation
-            if (!searchData.days) {
-                showMessage('Please select number of days', 'error');
-                return;
-            }
-            if (searchData.adults === 0) {
-                showMessage('Please select at least 1 adult', 'error');
-                return;
-            }
-            if (searchData.children > 0 && !searchData.childAge) {
-                showMessage('Please select child age', 'error');
-                return;
-            }
-
-            setLoadingState(true);
-
-            // Prepare API parameters
-            const apiParams = {
-                days: parseInt(searchData.days),
-                adults: searchData.adults,
-                children: searchData.children,
-                packageType: searchData.packageType,
-                travellingWithPets: searchData.travellingWithPets
-            };
-
-            // Add child age if children are present
-            if (searchData.children > 0 && searchData.childAge) {
-                apiParams.childAge = parseInt(searchData.childAge);
-            }
-
-            try {
-                console.log('Searching with parameters:', apiParams);
-                const data = await fetchTravelPackages(apiParams);
-                console.log('API Response:', data);
-                
-                showMessage('Packages loaded successfully!', 'success');
-                displayResults(data);
-                 travelPackages.push(response.data)
-                
-                // Scroll to results
-                resultsContainer.scrollIntoView({ behavior: 'smooth' });
-                
-            } catch (error) {
-                console.error('Search Error:', error);
-                showMessage(error.message || 'Failed to load packages. Please try again.', 'error');
-            } finally {
-                setLoadingState(false);
-            }
-        });
-        // Initialize display
+// Counter event listeners with proper event handling
+adultsIncrement.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (searchData.adults < 20) {
+        searchData.adults++;
+        adultsInput.value = searchData.adults;
         updateGuestsDisplay();
-        updateChildAgeSection();
+        animateInput(adultsInput);
+    }
+});
 
-    </script>
+adultsDecrement.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (searchData.adults > 0) {
+        searchData.adults--;
+        adultsInput.value = searchData.adults;
+        updateGuestsDisplay();
+        animateInput(adultsInput);
+    }
+});
 
+childrenIncrement.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (searchData.children < 20) {
+        searchData.children++;
+        childrenInput.value = searchData.children;
+        updateGuestsDisplay();
+        animateInput(childrenInput);
+    }
+});
+
+childrenDecrement.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (searchData.children > 0) {
+        searchData.children--;
+        childrenInput.value = searchData.children;
+        updateGuestsDisplay();
+        animateInput(childrenInput);
+    }
+});
+
+// Fixed Done button functionality
+guestsDone.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleGuestsPopover(false);
+});
+
+// Close popover when clicking outside
+document.addEventListener('click', (e) => {
+    if (!guestsPopover.contains(e.target) && !guestsTrigger.contains(e.target)) {
+        toggleGuestsPopover(false);
+    }
+});
+
+// Prevent popover from closing when clicking inside it
+guestsPopover.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+// Fixed main search functionality
+searchBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    
+    // Validation
+    if (!searchData.days) {
+        showMessage('Please select number of days', 'error');
+        daysSelect.focus();
+        animateInput(daysSelect);
+        return;
+    }
+    
+    if (searchData.adults === 0) {
+        showMessage('Please select at least 1 adult', 'error');
+        toggleGuestsPopover(true);
+        return;
+    }
+
+    setLoadingState(true);
+
+    // Prepare API parameters
+    const apiParams = {
+        days: parseInt(searchData.days),
+        adults: searchData.adults,
+        children: searchData.children,
+        packageType: searchData.packageType
+    };
+
+    if (searchData.travellingWithPets) {
+        apiParams.travellingWithPets = true;
+    }
+    if (searchData.children > 0 && searchData.childAge) {
+        apiParams.childAge = parseInt(searchData.childAge);
+    }
+
+    try {
+        console.log('Searching with parameters:', apiParams);
+        const data = await fetchTravelPackages(apiParams);
+        console.log('Search results:', data);
+        
+        showMessage(`Found ${data?.data?.length || 0} packages matching your criteria!`, 'success');
+        displayResults(data);
+        travelPackages = data?.data || [];
+        
+        // Scroll to results
+        setTimeout(() => {
+            results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 300);
+        
+    } catch (error) {
+        console.error('Search Error:', error);
+        showMessage(error.message || 'Failed to load packages. Please try again.', 'error');
+    } finally {
+        setLoadingState(false);
+    }
+});
+
+// Initialize display
+updateGuestsDisplay();
+
+// Handle Enter key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && guestsPopover.classList.contains('hidden')) {
+        searchBtn.click();
+    }
+});
+</script>
 
   <script src="./languageSwitcher.js"></script>
   <script src="../d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c80c88.js?site=66920f2a1e03460f2a6e88a5"
